@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using SQA_Tower_Defense;
 using NUnit.Framework;
-using 
+
 
 namespace ClassLibrary1
 {
@@ -13,7 +13,7 @@ namespace ClassLibrary1
         [Test()]
         public void testTowerInit()
         {
-            Tower t = new Tower();
+            Tower t = new Tower(null, null, null, null, null, null);
             Assert.IsNotNull(t);
         }
 
