@@ -1,0 +1,6 @@
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\Tower-Defense\Tower-Defense\Tower-Defense\bin\x86\Debug\Tower-Defense.exe
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\Tower-Defense\Tower-Defense\Tower-Defense\bin\x86\Debug\Tower-Defense.pdb
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\Tower-Defense\Tower-Defense\Tower-Defense\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\Tower-Defense\Tower-Defense\Tower-Defense\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\Tower-Defense\Tower-Defense\Tower-Defense\obj\x86\Debug\Tower-Defense.exe
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\Tower-Defense\Tower-Defense\Tower-Defense\obj\x86\Debug\Tower-Defense.pdb
