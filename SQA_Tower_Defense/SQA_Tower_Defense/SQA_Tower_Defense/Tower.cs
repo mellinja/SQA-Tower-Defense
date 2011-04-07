@@ -17,6 +17,7 @@ namespace SQA_Tower_Defense
         protected int cost;
         protected int range;
         protected List<Enemy> nearbyEnemies;
+        
 
         public Tower(Texture2D towerImage, String name, int health, int damage,
                         int cost, int range, Vector2 location)
@@ -28,7 +29,6 @@ namespace SQA_Tower_Defense
             this.cost = cost;
             this.range = range;
             this.location = location;
-
         }
 
         public void AddNearbyEnemy(Enemy enemy)
