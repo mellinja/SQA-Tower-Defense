@@ -9,26 +9,23 @@ namespace SQA_Tower_Defense
 {
     class Tower
     {
-        protected Texture2D towerImage;
         protected String name;
-        protected Vector2 location;
+        
         protected int health;
         protected int attackDamage;
         protected int cost;
         protected int range;
         protected List<Enemy> nearbyEnemies;
+        
 
-        public Tower(Texture2D towerImage, String name, int health, int damage,
-                        int cost, int range, Vector2 location)
+        public Tower(String name, int health, int damage, int cost, int range)
         {
-            this.towerImage = towerImage;
+           
             this.name = name;
             this.health = health;
             this.attackDamage = damage;
             this.cost = cost;
             this.range = range;
-            this.location = location;
-
         }
 
         public void AddNearbyEnemy(Enemy enemy)
@@ -56,10 +53,6 @@ namespace SQA_Tower_Defense
         public int Range
         {
             get { return this.range; }
-        }
-        public Texture2D Image
-        {
-            get { return this.towerImage; }
         }
         public String Name
         {

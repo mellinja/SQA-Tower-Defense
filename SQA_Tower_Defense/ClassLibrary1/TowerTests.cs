@@ -13,7 +13,7 @@ namespace ClassLibrary1
         [Test()]
         public void testTowerInit()
         {
-            Tower t = new Tower(null, null, null, null, null, null, null);
+            Tower t = new Tower(null, null, null, null, null, null);
             Assert.IsNotNull(t);
         }
 

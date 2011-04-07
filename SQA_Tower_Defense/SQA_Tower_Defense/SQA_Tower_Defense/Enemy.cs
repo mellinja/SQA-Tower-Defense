@@ -15,16 +15,14 @@ namespace SQA_Tower_Defense
         protected double speed;
         protected String type;
         protected Vector2 currentLocation;
-        protected Texture2D image;
 
-        public Enemy(int health, double speed, String type, int gold, Vector2 location, Texture2D image)
+        public Enemy(int health, double speed, String type, int gold, Vector2 location)
         {
             this.health = health;
             this.speed = speed;
             this.type = type;
             this.gold = gold;
             this.currentLocation = location;
-            this.image = image;
         }
 
         public int Health
@@ -43,14 +41,6 @@ namespace SQA_Tower_Defense
         public int Gold
         {
             get { return this.gold; }
-        }
-        public Vector2 Location
-        {
-            get { return this.currentLocation; }
-        }
-        public Texture2D Image
-        {
-            get { return this.image; }
         }
 
     }
