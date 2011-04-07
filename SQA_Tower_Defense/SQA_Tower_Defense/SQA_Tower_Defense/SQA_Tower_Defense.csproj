@@ -90,6 +90,8 @@
     <Reference Include="mscorlib">
       <Private>False</Private>
     </Reference>
+    <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="nunit.mocks, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
@@ -117,8 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SQA_Tower_DefenseContent\SQA_Tower_DefenseContent.contentproj">
-      <Name>SQA_Tower_DefenseContent</Name>
+      <Name>SQA_Tower_DefenseContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{BEF7F8C2-4F18-4F7F-8FEB-0D2966BEC7E4}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
