@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NUnit.Framework;
 
-namespace SQA_Tower_Defense
+namespace ClassTests
 {
-    public class Map
+    [TestFixture()]
+    public class MapTests
     {
 
     }

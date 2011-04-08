@@ -38,11 +38,13 @@ namespace SQA_Tower_Defense
             if(nearbyEnemies.Count > 0)
                 nearbyEnemies[0].Health -= this.attackDamage;
         }
+
         public int Health
         {
             get { return this.health; }
             set { this.health = value; }
         }
+
         public int AttackDamage
         {
             get { return this.attackDamage; }

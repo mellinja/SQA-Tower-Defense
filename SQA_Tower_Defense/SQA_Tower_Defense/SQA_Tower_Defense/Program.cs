@@ -10,7 +10,7 @@ namespace SQA_Tower_Defense
         /// </summary>
         static void Main(string[] args)
         {
-            using (Map game = new Map())
+            using (MainGame game = new MainGame())
             {
                 game.Run();
             }
