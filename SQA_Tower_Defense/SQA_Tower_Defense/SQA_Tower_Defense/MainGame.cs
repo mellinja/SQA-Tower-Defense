@@ -18,6 +18,8 @@ namespace SQA_Tower_Defense
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Texture2D tower;
+        MouseState previousMouseState;
 
         public MainGame()
         {
@@ -47,6 +49,8 @@ namespace SQA_Tower_Defense
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            tower = Content.Load<Texture2D>("Sprites\\Eiffel");
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -70,6 +74,8 @@ namespace SQA_Tower_Defense
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            UpdateInput();
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -82,10 +88,35 @@ namespace SQA_Tower_Defense
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
+            spriteBatch.Draw(tower, new Rectangle(0, 0, 50, 50), Color.White);
+            spriteBatch.End();
 
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+
+
+        protected void UpdateInput()
+        {
+            MouseState mouseState = Mouse.GetState();
+
+            if (mouseState.LeftButton == ButtonState.Pressed && previousMouseState.LeftButton == ButtonState.Released)
+            {
+                
+            }
+
+
+
+
+
+
+                previousMouseState = mouseState;
+
+
+            
+
         }
     }
 }

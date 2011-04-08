@@ -78,7 +78,13 @@ namespace ClassTests
         #endregion
 
         #region Enemy Interaction
-        
+
+        [Test()]
+        public void EnemiesTakeDamageWhenShot()
+        {
+
+        }
+
         [Test()]
         public void testGetsEnemy()
         {
@@ -87,5 +93,15 @@ namespace ClassTests
 
         #endregion 
 
+        #region Miscellaneous
+
+        [Test()]
+        public void TowersUpgradeToNewTower()
+        {
+
+        }
+
+
+        #endregion
     }
 }

@@ -7,6 +7,10 @@ namespace SQA_Tower_Defense
 {
     public class Map
     {
+        
+        public Map(String gametype, int money, int difficulty)
+        {
 
+        }
     }
 }
