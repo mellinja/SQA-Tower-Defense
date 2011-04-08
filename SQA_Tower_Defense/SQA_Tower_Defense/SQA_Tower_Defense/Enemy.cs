@@ -7,22 +7,20 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SQA_Tower_Defense
 {
-    class Enemy
+    public class Enemy
     {
 
         protected int health;
         protected int gold;
         protected double speed;
         protected String type;
-        protected Vector2 currentLocation;
 
-        public Enemy(int health, double speed, String type, int gold, Vector2 location)
+        public Enemy(int health, double speed, String type, int gold)
         {
             this.health = health;
             this.speed = speed;
             this.type = type;
             this.gold = gold;
-            this.currentLocation = location;
         }
 
         public int Health

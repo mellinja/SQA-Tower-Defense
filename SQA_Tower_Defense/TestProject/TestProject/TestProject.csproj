@@ -1,23 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{0B7C27BB-0ABC-4AC4-BF5A-0DD6F177CA43}</ProjectGuid>
+    <ProjectGuid>{4358F5B8-6EAA-42B6-8CBE-8970CE587692}</ProjectGuid>
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SQA_Tower_Defense</RootNamespace>
-    <AssemblyName>SQA_Tower_Defense</AssemblyName>
+    <RootNamespace>TestProject</RootNamespace>
+    <AssemblyName>TestProject</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
     <XnaPlatform>Windows</XnaPlatform>
     <XnaProfile>HiDef</XnaProfile>
-    <XnaCrossPlatformGroupID>c2907f87-69b1-4051-b3f8-b1658806124b</XnaCrossPlatformGroupID>
+    <XnaCrossPlatformGroupID>13ec4e0a-dd40-4a0a-9dbf-57eb93f53f82</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
-    <ApplicationIcon>Game.ico</ApplicationIcon>
-    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <Thumbnail>
+    </Thumbnail>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -91,7 +93,6 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
-    <Reference Include="nunit.mocks, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
@@ -109,21 +110,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enemy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Map.cs" />
-    <Compile Include="Tower.cs" />
+    <Compile Include="TowerTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Game.ico" />
-    <Content Include="GameThumbnail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SQA_Tower_DefenseContent\SQA_Tower_DefenseContent.contentproj">
-      <Name>SQA_Tower_DefenseContent %28Content%29</Name>
+    <ProjectReference Include="..\..\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense.csproj">
+      <Project>{0B7C27BB-0ABC-4AC4-BF5A-0DD6F177CA43}</Project>
+      <Name>SQA_Tower_Defense</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestProjectContent\TestProjectContent.contentproj">
+      <Name>TestProjectContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
-      <Project>{BEF7F8C2-4F18-4F7F-8FEB-0D2966BEC7E4}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

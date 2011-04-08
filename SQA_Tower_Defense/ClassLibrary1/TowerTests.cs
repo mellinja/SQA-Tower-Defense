@@ -4,59 +4,88 @@ using SQA_Tower_Defense;
 using NUnit.Framework;
 
 
-namespace ClassLibrary1
+namespace ClassTests
 {
     [TestFixture()]
     public class TowerTests
     {
+        private Tower tower;
 
+        #region Initializates
+        
+        
         [Test()]
-        public void testTowerInit()
+        public void testInit()
         {
-            Tower t = new Tower(null, null, null, null, null, null);
-            Assert.IsNotNull(t);
+            tower = new Tower("", 0, 0, 0, 0);
+            Assert.IsNotNull(tower);
         }
+        
+        #endregion
 
+        #region Testing Health
+        
         [Test()]
-        public void testTowerGetsHealth()
+        public void towerHasCorrectHealthWhenInitialized()
         {
-            Tower t = new Tower();
-            t.setHealth = 10;
-            Assert.AreEqual(t.Health,10);
-
-        }
-
-        [Test()]
-        public void testTowerGetsRange()
-        {
-            Tower t = new Tower();
-            t.setRange = 10;
-            Assert.AreEqual(t.Range, 10);
+            tower = new Tower("", 10, 20,30,40);
+            Assert.AreEqual(tower.Health,10);
 
         }
-
+        
         [Test()]
-        public void testTowerGetsCost()
+        public void towerHasCorrectHealthAfterModified()
         {
-            Tower t = new Tower();
-            t.setCost = 10;
-            Assert.AreEqual(t.Cost, 10);
+            tower = new Tower("", 10, 20,30,40);
+            tower.Health -= 1;
+            Assert.AreEqual(tower.Health,9);
+        }
+        
+        #endregion
+
+        #region Testing Range
+        
+        [Test()]
+        public void towerHasCorrectRangeWhenInitialized()
+        {
+            tower= new Tower("",10, 20, 30, 40);
+            Assert.AreEqual(tower.Range, 40);
+        }
+
+        #endregion
+
+        #region Testing Cost
+        
+        [Test()]
+        public void towerHasCorrectCostWhenInitialized()
+        {
+            tower= new Tower("",10,20,30,40);
+            Assert.AreEqual(tower.Cost, 30);
 
         }
 
+        #endregion
+
+        #region Testing Damage
+        
         [Test()]
-        public void testTowerGetsAttackDamage()
+        public void towerHasCorrectAttackDamageWhenInitialized()
         {
-            Tower t = new Tower();
-            t.setAttackDamage = 10;
-            Assert.AreEqual(t.AttackDamage, 10);
+             tower= new Tower("",10,20,30,40);
+            Assert.AreEqual(tower.AttackDamage, 20);
+        }
+        
+        #endregion
+
+        #region Enemy Interaction
+        
+        [Test()]
+        public void testGetsEnemy()
+        {
 
         }
 
-        [Test()]
-        public void testTowerGetsEnemy()
-            Tower t = new Tower();
-            
+        #endregion 
 
     }
 }

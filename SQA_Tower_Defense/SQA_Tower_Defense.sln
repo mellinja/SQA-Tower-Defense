@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQA_Tower_DefenseContent", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{372114FD-8160-477E-95B7-62DDEAF782AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{9C1409F0-CB29-46C5-8183-52CCACF5CE40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassTests", "ClassLibrary1\ClassTests.csproj", "{9C1409F0-CB29-46C5-8183-52CCACF5CE40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectContent", "TestProject\TestProjectContent\TestProjectContent.contentproj", "{5C537620-AB5D-4EA7-9C2F-A660AB40AABF}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -48,6 +50,12 @@ Global
 		{9C1409F0-CB29-46C5-8183-52CCACF5CE40}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9C1409F0-CB29-46C5-8183-52CCACF5CE40}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9C1409F0-CB29-46C5-8183-52CCACF5CE40}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C537620-AB5D-4EA7-9C2F-A660AB40AABF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{5C537620-AB5D-4EA7-9C2F-A660AB40AABF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{5C537620-AB5D-4EA7-9C2F-A660AB40AABF}.Debug|x86.ActiveCfg = Debug|x86
+		{5C537620-AB5D-4EA7-9C2F-A660AB40AABF}.Release|Any CPU.ActiveCfg = Release|x86
+		{5C537620-AB5D-4EA7-9C2F-A660AB40AABF}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{5C537620-AB5D-4EA7-9C2F-A660AB40AABF}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

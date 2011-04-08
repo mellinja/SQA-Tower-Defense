@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace SQA_Tower_Defense
 {
-    class Tower
+    public class Tower
     {
         protected String name;
         
@@ -16,9 +16,9 @@ namespace SQA_Tower_Defense
         protected int cost;
         protected int range;
         protected List<Enemy> nearbyEnemies;
-        
 
-        public Tower(String name, int health, int damage, int cost, int range)
+
+        public Tower (String name, int health, int damage, int cost, int range)
         {
            
             this.name = name;
@@ -41,10 +41,12 @@ namespace SQA_Tower_Defense
         public int Health
         {
             get { return this.health; }
+            set { this.health = value; }
         }
         public int AttackDamage
         {
             get { return this.attackDamage; }
+            
         }
         public int Cost
         {
