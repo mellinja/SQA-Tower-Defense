@@ -31,6 +31,7 @@ namespace SQA_Tower_Defense
         public double Speed
         {
             get { return this.speed; }
+            set { this.speed = value; }
         }
         public String Type
         {
