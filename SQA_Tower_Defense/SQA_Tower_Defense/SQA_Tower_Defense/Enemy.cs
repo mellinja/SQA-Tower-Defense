@@ -31,11 +31,11 @@ namespace SQA_Tower_Defense
 
         public void Move()
         {
-            if (this.location.X > random.Next(600)*100)
+            if (this.location.X > random.Next(60)*100)
                 xDirection *= -1;
             if (this.Location.X < 20)
                 xDirection *= -1;
-            if (this.Location.Y > random.Next(600)*100)
+            if (this.Location.Y > random.Next(60)*100)
                 yDirection *= -1;
             if (this.Location.Y < 20)
                 yDirection *= -1;
