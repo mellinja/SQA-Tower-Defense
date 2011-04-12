@@ -18,12 +18,24 @@ namespace SQA_Tower_Defense
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Texture2D tower;
+        Tower placingTower;
+        Texture2D towerTex;
+        SpriteFont font;
+
         MouseState previousMouseState;
+        KeyboardState previousKeyboardState;
+
+        int gridSize;
+
+        //rewinding
+        int gameTimer;
+
+        Map map;
 
         public MainGame()
         {
             graphics = new GraphicsDeviceManager(this);
+            //graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
         }
 
@@ -36,7 +48,6 @@ namespace SQA_Tower_Defense
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
             base.Initialize();
         }
 
@@ -46,11 +57,18 @@ namespace SQA_Tower_Defense
         /// </summary>
         protected override void LoadContent()
         {
+
+            this.IsMouseVisible = true;
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            tower = Content.Load<Texture2D>("Sprites\\Eiffel");
-
+            font = Content.Load<SpriteFont>("font");
+            gridSize = 25;
+            gameTimer = 0;
+            placingTower = new Tower("", 10, 10, 10, 10, new Rectangle(0, 0, 50, 50));
+            map = new Map("", 100, 0);
+            towerTex = Content.Load<Texture2D>("Sprites\\Eiffel");
+            map.Enemies.Add(new Enemy(10, 10f, "", 10, new Rectangle(50, 50, 50, 50)));
+            
             // TODO: use this.Content to load your game content here
         }
 
@@ -70,9 +88,11 @@ namespace SQA_Tower_Defense
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+           
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+
 
             UpdateInput();
 
@@ -87,9 +107,27 @@ namespace SQA_Tower_Defense
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
-            spriteBatch.Draw(tower, new Rectangle(0, 0, 50, 50), Color.White);
+            spriteBatch.DrawString(font, "" + previousMouseState, new Vector2(50, 50), Color.Firebrick);
+            if (map.Money > 0)
+                spriteBatch.DrawString(font, "Money: " + map.Money, new Vector2(50, 100), Color.Firebrick);
+            else
+                spriteBatch.DrawString(font, "Out of money!", new Vector2(50, 100), Color.Firebrick);
+            for (int i = 0; i < map.Towers.Count; i++)
+            {
+                spriteBatch.Draw(towerTex, map.Towers[i].Location, Color.White);
+            }
+            for (int i = 0; i < map.Enemies.Count; i++)
+                spriteBatch.Draw(towerTex, map.Enemies[i].Location, Color.Red);
+            
+            spriteBatch.DrawString(font, "Time: " + ((gameTimer - (gameTimer % 30))/30), new Vector2(50, 75), Color.Firebrick);
+            spriteBatch.DrawString(font, "Saves: " + map.SaveStates.Count, new Vector2(50, 150), Color.Firebrick);
+            if(previousKeyboardState.IsKeyDown(Keys.LeftAlt))
+                spriteBatch.DrawString(font, "Rewinding.",new Vector2(300, 75), Color.HotPink);
+            if(placingTower != null)
+            spriteBatch.Draw(towerTex, placingTower.Location, Color.White);
+            
             spriteBatch.End();
 
             // TODO: Add your drawing code here
@@ -101,22 +139,70 @@ namespace SQA_Tower_Defense
         protected void UpdateInput()
         {
             MouseState mouseState = Mouse.GetState();
+            KeyboardState boardState = Keyboard.GetState();
 
-            if (mouseState.LeftButton == ButtonState.Pressed && previousMouseState.LeftButton == ButtonState.Released)
+            if (placingTower != null)
+            {
+
+                placingTower.Location = new Rectangle(mouseState.X - (mouseState.X % gridSize), mouseState.Y - (mouseState.Y % gridSize), placingTower.Location.Width, placingTower.Location.Height);
+
+                if (mouseState.LeftButton == ButtonState.Pressed && previousMouseState.LeftButton == ButtonState.Released)
+                {
+                    for (int i = 0; i < map.Towers.Count; i++)
+                    {
+                        
+                    }
+                    map.PlaceTower(new Tower("", 10, 10, 10, 10, placingTower.Location));
+
+                    placingTower = null;
+                }
+
+              }
+
+           if (mouseState.RightButton == ButtonState.Pressed && previousMouseState.RightButton == ButtonState.Released)
+            {
+                for (int i = 0; i < map.Towers.Count; i++)
+                {
+                    if (mouseState.X > map.Towers[i].Location.X && mouseState.X < map.Towers[i].Location.X + map.Towers[i].Location.Width && mouseState.Y > map.Towers[i].Location.Y
+                        && mouseState.Y < map.Towers[i].Location.Y + map.Towers[i].Location.Height)
+                    {
+                        map.SellTower(map.Towers[i]);
+                    }
+                }
+            }
+
+            if(boardState.IsKeyDown(Keys.D1) && previousKeyboardState.IsKeyUp(Keys.D1))
+            {
+                placingTower = new Tower("", 10, 10, 10, 10, new Rectangle(mouseState.X - (mouseState.X % gridSize), mouseState.Y - (mouseState.Y % gridSize), 50, 50));
+            }
+
+            if (boardState.IsKeyUp(Keys.LeftAlt))
+            {
+
+                for (int i = 0; i < map.Enemies.Count; i++)
+                    map.Enemies[i].Move();
+                gameTimer++;
+                map.SaveNextState();
+            }
+            if (boardState.IsKeyDown(Keys.LeftAlt))
             {
                 
+                gameTimer--;
+                map.LoadPreviousState();
             }
 
 
 
 
 
-
                 previousMouseState = mouseState;
-
+                previousKeyboardState = boardState;
 
             
 
         }
+
+
+
+        }
     }
-}

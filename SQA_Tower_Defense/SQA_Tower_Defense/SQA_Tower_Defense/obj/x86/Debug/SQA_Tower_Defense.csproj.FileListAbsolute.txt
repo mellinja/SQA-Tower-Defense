@@ -17,3 +17,4 @@ C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA
 C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\obj\x86\Debug\SQA_Tower_Defense.exe
 C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\obj\x86\Debug\SQA_Tower_Defense.pdb
 C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\Content\Sprites\Eiffel.xnb
+C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\Content\font.xnb

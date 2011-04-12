@@ -14,13 +14,33 @@ namespace SQA_Tower_Defense
         protected int gold;
         protected double speed;
         protected String type;
+        protected Rectangle location;
+        protected int xDirection = 1;
+        protected int yDirection = 1;
+        Random random = new Random();
 
-        public Enemy(int health, double speed, String type, int gold)
+        public Enemy(int health, double speed, String type, int gold, Rectangle location)
         {
             this.health = health;
             this.speed = speed;
             this.type = type;
             this.gold = gold;
+
+            this.location = location;
+        }
+
+        public void Move()
+        {
+            if (this.location.X > random.Next(600)*100)
+                xDirection *= -1;
+            if (this.Location.X < 20)
+                xDirection *= -1;
+            if (this.Location.Y > random.Next(600)*100)
+                yDirection *= -1;
+            if (this.Location.Y < 20)
+                yDirection *= -1;
+            this.location = new Rectangle(location.X + xDirection, location.Y + yDirection, 50, 50);
+            
         }
 
         public int Health
@@ -40,6 +60,11 @@ namespace SQA_Tower_Defense
         public int Gold
         {
             get { return this.gold; }
+        }
+        public Rectangle Location
+        {
+            get { return this.location; }
+            set { this.Location = value; }
         }
 
     }

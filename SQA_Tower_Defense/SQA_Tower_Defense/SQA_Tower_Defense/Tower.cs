@@ -15,17 +15,20 @@ namespace SQA_Tower_Defense
         protected int attackDamage;
         protected int cost;
         protected int range;
+        Rectangle location;
         protected List<Enemy> nearbyEnemies;
 
 
-        public Tower (String name, int health, int damage, int cost, int range)
+        public Tower (String name, int health, int damage, int cost, int range, Rectangle location)
         {
-           
             this.name = name;
+            this.location = location;
             this.health = health;
             this.attackDamage = damage;
             this.cost = cost;
             this.range = range;
+
+            this.nearbyEnemies = new List<Enemy>();
         }
 
         public void AddNearbyEnemy(Enemy enemy)
@@ -62,8 +65,15 @@ namespace SQA_Tower_Defense
         {
             get { return this.name; }
         }
-
-
+        public List<Enemy> Enemies
+        {
+            get { return this.nearbyEnemies; }
+        }
+        public Rectangle Location
+        {
+            get { return this.location; }
+            set { this.location = value; }
+        }
         
     }
 }
