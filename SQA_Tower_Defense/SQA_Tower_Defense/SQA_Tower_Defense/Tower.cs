@@ -21,6 +21,20 @@ namespace SQA_Tower_Defense
 
         public Tower (String name, int health, int damage, int cost, int range, Rectangle location)
         {
+
+            if (location.Equals(new Rectangle()))
+                throw new ArgumentNullException();
+            if (range <= 0)
+                throw new ArgumentOutOfRangeException();
+            if (damage <= 0)
+                throw new ArgumentOutOfRangeException();
+            if (health <= 0)
+                throw new ArgumentOutOfRangeException();
+
+            if (cost <= 0)
+                throw new ArgumentOutOfRangeException();
+
+
             this.name = name;
             this.location = location;
             this.health = health;

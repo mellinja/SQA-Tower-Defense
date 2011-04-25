@@ -21,6 +21,20 @@ namespace SQA_Tower_Defense
 
         public Enemy(int health, double speed, String type, int gold, Rectangle location)
         {
+
+            if (location.Equals(new Rectangle()))
+                throw new ArgumentNullException();
+            if (gold <= 0)
+                throw new ArgumentOutOfRangeException();
+            if (speed <= 0)
+                throw new ArgumentOutOfRangeException();
+            if (health <= 0)
+                throw new ArgumentOutOfRangeException();
+
+            if (type != "basic")
+                throw new ArgumentException();
+
+            
             this.health = health;
             this.speed = speed;
             this.type = type;

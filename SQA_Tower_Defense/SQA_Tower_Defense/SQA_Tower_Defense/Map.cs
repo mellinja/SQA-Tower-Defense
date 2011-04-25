@@ -17,6 +17,26 @@ namespace SQA_Tower_Defense
 
         public Map(String gametype, int startingMoney, int difficulty)
         {
+            if (1 > difficulty || difficulty > 3)
+                throw new ArgumentOutOfRangeException();
+
+
+            if (1 > difficulty || difficulty > 3)
+                throw new ArgumentOutOfRangeException();
+
+
+            if (1 > difficulty || difficulty > 3)
+                throw new ArgumentOutOfRangeException();
+
+
+            if (gametype != "normal")
+                throw new ArgumentException();
+
+
+            if (startingMoney < 0)
+                throw new ArgumentOutOfRangeException();
+
+            
             this.gametype = gametype;
             this.money = startingMoney;
             this.difficulty = difficulty;

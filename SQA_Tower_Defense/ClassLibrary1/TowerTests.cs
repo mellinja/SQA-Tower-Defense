@@ -33,6 +33,86 @@ namespace ClassTests
             tower = new Tower("", 0, 0, 0, 0, rec);
             Assert.IsNotNull(tower);
         }
+
+
+        //Testing that tower throws an Exception with null area
+        [Test()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void testTowerThrowsExceptioOnNullArea()
+        {
+            Tower t = new Tower("tower", 10, 10, 10, 10, new Rectangle());
+        }
+
+
+        //Testing that tower throws an Exception with negative range
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTowerThrowsExceptioOnNegativeRange()
+        {
+            Tower t = new Tower("tower", 10, 10, 10, -10, new Rectangle(0, 0, 10, 10));
+        }
+
+        //Testing that tower throws an Exception with zero range
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTowerThrowsExceptioOnZeroRange()
+        {
+            Tower t = new Tower("tower", 10, 10, 10, 0, new Rectangle(0, 0, 10, 10));
+        }
+
+
+        //Testing that tower throws an Exception with negative damage
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTowerThrowsExceptioOnNegativeDamage()
+        {
+            Tower t = new Tower("tower", 10, -10, 10, 10, new Rectangle(0, 0, 10, 10));
+        }
+
+        //Testing that tower throws an Exception with zero damage
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTowerThrowsExceptioOnZeroDamage()
+        {
+            Tower t = new Tower("tower", 10, 0, 10, 10, new Rectangle(0, 0, 10, 10));
+        }
+
+
+
+        //Testing that tower throws an Exception with negative cost
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTowerThrowsExceptioOnNegativeCost()
+        {
+            Tower t = new Tower("tower", 10, 10, -10, 10, new Rectangle(0, 0, 10, 10));
+        }
+
+        //Testing that tower throws an Exception with zero cost
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTowerThrowsExceptioOnZeroCost()
+        {
+            Tower t = new Tower("tower", 10, 10, 0, 10, new Rectangle(0, 0, 10, 10));
+        }
+
+
+
+        //Testing that tower throws an Exception with negative health
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTowerThrowsExceptioOnNegativeHealth()
+        {
+            Tower t = new Tower("tower", -10, 10, 10, 10, new Rectangle(0, 0, 10, 10));
+        }
+
+        //Testing that tower throws an Exception with zero health
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTowerThrowsExceptioOnZeroHealth()
+        {
+            Tower t = new Tower("tower", 0, 10, 10, 10, new Rectangle(0, 0, 10, 10));
+        }
+
         
         #endregion
 
@@ -107,5 +187,8 @@ namespace ClassTests
 
 
         #endregion
+
+
+
     }
 }

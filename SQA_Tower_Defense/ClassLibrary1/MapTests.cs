@@ -21,10 +21,10 @@ namespace ClassTests
         [SetUp()]
         public void SetUp()
         {
-            map = new Map("", 100, 0);
+            map = new Map("normal", 100, 0);
             rec = new Rectangle(0, 0, 5, 5);
-            tower = new Tower("", 10, 20, 30, 40, rec);
-            enemy = new Enemy(10, 1.0f, "", 10, rec);
+            tower = new Tower("tower", 10, 20, 30, 40, rec);
+            enemy = new Enemy(10, 1.0f, "basic", 10, rec);
         }
 
         #region Initialization
@@ -33,9 +33,48 @@ namespace ClassTests
         public void MapInitializes()
         {
 
-            map = new Map("", 0, 1);
+            map = new Map("normal", 0, 1);
             Assert.IsNotNull(map);
 
+        }
+
+        //Testing that map throws an expection with bad difficulties (valid difficulties range from 1 to 3
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void test0Difficulty()
+        {
+            Map m = new Map("normal", 10000, 0);
+        }
+
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testNegativeDifficulty()
+        {
+            Map m = new Map("normal", 10000, -1);
+        }
+
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testTooHighDifficulty()
+        {
+            Map m = new Map("normal", 10000, 4);
+        }
+
+        //Testing Invalid Game type ("normal" is a valid game type)
+        [Test()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void testMapInvalidGameType()
+        {
+            Map m = new Map("invalid", 10000, 2);
+        }
+
+
+        //Testing negative starting money (0 starting money is possible)
+        [Test()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void testMapNegativeMoney()
+        {
+            Map m = new Map("normal", -10000, 2);
         }
 
 
@@ -60,8 +99,8 @@ namespace ClassTests
         [Test()]
         public void MoneyIncreasesWhenTowerIsSold()
         {
-            Map map = new Map("", 0, 0);
-            Tower tower = new Tower("", 10, 20, 30, 40, rec);
+            Map map = new Map("normal", 0, 0);
+            Tower tower = new Tower("normal", 10, 20, 30, 40, rec);
             map.SellTower(tower);
             Assert.AreEqual(22, map.Money);
         }
@@ -69,7 +108,7 @@ namespace ClassTests
         [Test()]
         public void InsufficientFundsRejectTowerPlacement()
         {
-            map = new Map("", 0, 0);
+            map = new Map("normal", 0, 0);
             map.PlaceTower(tower);
             Assert.AreEqual(map.Towers, new List<Tower>());
         }
@@ -100,8 +139,8 @@ namespace ClassTests
         public void TowersGetRemovedFromListWhenSold()
         {
 
-            Tower tower = new Tower("", 10, 20, 30, 40, rec);
-            Map map = new Map("", 0, 0);
+            Tower tower = new Tower("tower", 10, 20, 30, 40, rec);
+            Map map = new Map("normal", 0, 0);
             map.PlaceTower(tower);
             map.SellTower(tower);
             Assert.AreEqual(map.Towers, new List<Tower>());
@@ -123,7 +162,7 @@ namespace ClassTests
         [Test()]
         public void EnemiesNotInListThatGetKilledCrashGame()
         {
-            map = new Map("", 0, 0);
+            map = new Map("normal", 0, 0);
             map.KillEnemy(enemy);
         }
         
@@ -246,7 +285,7 @@ namespace ClassTests
         {
             map.SpawnEnemy(enemy);
             map.SpawnEnemy(enemy);
-            enemy = new Enemy(20, 30f, "", 30, rec);
+            enemy = new Enemy(20, 30f, "normal", 30, rec);
             map.SpawnEnemy(enemy);
             map.SaveNextState();
             Assert.AreEqual(map.SaveStates[0].enemies[2].Health, 20);
@@ -259,7 +298,7 @@ namespace ClassTests
             map.SpawnEnemy(enemy);
             map.SpawnEnemy(enemy);
             map.SaveNextState();
-            enemy = new Enemy(20, 30f, "", 30, rec);
+            enemy = new Enemy(20, 30f, "normal", 30, rec);
             map.SpawnEnemy(enemy);
             map.LoadPreviousState();
             Assert.AreEqual(map.Enemies[1].Health, 10);
