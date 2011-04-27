@@ -10,16 +10,23 @@ namespace ClassTests
     class TowerTestInteractionWithEnemiesWithsetup
     {
 
+
+        private Map map;
+        private int towerRange;
+        private Enemy enemy;
+        private Tower tower;
+        private Rectangle towerPosition;
+        private Rectangle enemyPosition;
+
         [SetUp()]
         public void SetUp()
         {
-            int towerRange = 5;
-            Rectangle towerPosition = new Rectangle(0, 50, 50, 50);
-            Rectangle enemyPosition = new Rectangle(0, 0, 25, 25);
-
-            Enemy enemy = new Enemy(10, 1.0f, "Enemy", 10, enemyPosition);
-            Tower tower = new Tower("Tower", 1, 1, 1, towerRange, towerPosition);
-            Map map = new Map("Gametype", 100, 0);
+            towerRange = 5;
+            towerPosition = new Rectangle(0, 50, 50, 50);
+            enemyPosition = new Rectangle(0, 0, 25, 25);
+            enemy = new Enemy(10, 1.0f, "basic", 10, enemyPosition);
+            tower = new Tower("Tower", 1, 1, 1, towerRange, towerPosition);
+            map = new Map("normal", 100, 0);
             map.PlaceTower(tower);
             map.SpawnEnemy(enemy);
 
@@ -117,7 +124,7 @@ namespace ClassTests
            tower.AttackEnemy(); 
            Assert.AreNotEqual(enemy.Health, 10); 
            Assert.AreEqual(tower.Enemies.Count ,2);
-           enemy.Moveto(5, 5);
+           enemy.moveTo(5, 5);
            tower.Update();
            Assert.AreEqual(tower.Enemies.Count, 1);
  
@@ -133,13 +140,13 @@ namespace ClassTests
             tower.Update();
             Assert.AreNotEqual(enemy.Health, 10);
             Assert.AreEqual(tower.Enemies.Count, 2);
-            enemy.Moveto(5, 5);
+            enemy.moveTo(5, 5);
             tower.Update();
             Assert.AreEqual(tower.Enemies.Count, 1);
             for (int x = 0; x < 59; x++) tower.Update();
             tower.Update();
             Assert.AreNotEqual(enemy2.Health, 10);
-            enemy.Moveto(6, 6);
+            enemy.moveTo(6, 6);
             tower.Update();
             Assert.AreEqual(tower.Enemies.Count, 0);
 

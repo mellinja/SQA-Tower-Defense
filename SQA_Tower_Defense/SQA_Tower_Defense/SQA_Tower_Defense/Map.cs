@@ -167,7 +167,7 @@ namespace SQA_Tower_Defense
         #endregion
 
 
-        private void Update()
+        public void Update()
         {
             foreach (Tower t in this.towersOnMap)
             {

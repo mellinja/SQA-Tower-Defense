@@ -102,28 +102,37 @@ namespace SQA_Tower_Defense
             if (this.updateCounter == UpdateMax)
             {
                 updateCounter = 0;
-                Enemy attacking = null;
-                double distanceToClosest = range;
-                foreach (Enemy e in Enemies)
-                {
-                    double tCenterX = (this.Location.X + this.Location.Width) / 2;
-                    double eCenterX = (e.Location.X + e.Location.Width) / 2;
-                    double tCenterY = (this.Location.Y + this.Location.Height) / 2;
-                    double eCenterY = (e.Location.Y + e.Location.Height) / 2;
+                Enemy attacking = this.getCurrentTarget();
 
-                    double distance = Math.Sqrt((tCenterX - eCenterX) * (tCenterX - eCenterX) + (tCenterY - eCenterY) * (tCenterY - eCenterY));
-
-                    if (distance <= distanceToClosest)
-                    {
-                        distanceToClosest = distance;
-                        attacking = e;
-                    }   
-                }
                 if (attacking != null)
                 {
                     this.AttackEnemy(attacking);
-                }   
+                    if (attacking.Health <= 0)
+                        this.Enemies.Remove(attacking);
+                }
             }
+        }
+
+        public Enemy getCurrentTarget()
+        {
+            Enemy attacking = null;
+            double distanceToClosest = range;
+            foreach (Enemy e in Enemies)
+            {
+                double tCenterX = (this.Location.X + this.Location.Width) / 2;
+                double eCenterX = (e.Location.X + e.Location.Width) / 2;
+                double tCenterY = (this.Location.Y + this.Location.Height) / 2;
+                double eCenterY = (e.Location.Y + e.Location.Height) / 2;
+
+                double distance = Math.Sqrt((tCenterX - eCenterX) * (tCenterX - eCenterX) + (tCenterY - eCenterY) * (tCenterY - eCenterY));
+
+                if (distance <= distanceToClosest)
+                {
+                    distanceToClosest = distance;
+                    attacking = e;
+                }
+            }
+            return attacking;
         }
     }
 }

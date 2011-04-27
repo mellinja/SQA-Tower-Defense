@@ -21,7 +21,7 @@ namespace ClassTests
         [SetUp()]
         public void SetUp()
         {
-            map = new Map("normal", 100, 0);
+            map = new Map("normal", 100, 1);
             rec = new Rectangle(0, 0, 5, 5);
             tower = new Tower("tower", 10, 20, 30, 40, rec);
             enemy = new Enemy(10, 1.0f, "basic", 10, rec);
