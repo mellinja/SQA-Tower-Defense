@@ -99,7 +99,7 @@ namespace ClassTests
         [Test()]
         public void MoneyIncreasesWhenTowerIsSold()
         {
-            Map map = new Map("normal", 0, 0);
+            Map map = new Map("normal", 0, 1);
             Tower tower = new Tower("normal", 10, 20, 30, 40, rec);
             map.SellTower(tower);
             Assert.AreEqual(22, map.Money);
@@ -108,7 +108,7 @@ namespace ClassTests
         [Test()]
         public void InsufficientFundsRejectTowerPlacement()
         {
-            map = new Map("normal", 0, 0);
+            map = new Map("normal", 0, 1);
             map.PlaceTower(tower);
             Assert.AreEqual(map.Towers, new List<Tower>());
         }
@@ -140,7 +140,7 @@ namespace ClassTests
         {
 
             Tower tower = new Tower("tower", 10, 20, 30, 40, rec);
-            Map map = new Map("normal", 0, 0);
+            Map map = new Map("normal", 0, 1);
             map.PlaceTower(tower);
             map.SellTower(tower);
             Assert.AreEqual(map.Towers, new List<Tower>());
@@ -162,7 +162,7 @@ namespace ClassTests
         [Test()]
         public void EnemiesNotInListThatGetKilledCrashGame()
         {
-            map = new Map("normal", 0, 0);
+            map = new Map("normal", 0, 1);
             map.KillEnemy(enemy);
         }
         
@@ -285,7 +285,7 @@ namespace ClassTests
         {
             map.SpawnEnemy(enemy);
             map.SpawnEnemy(enemy);
-            enemy = new Enemy(20, 30f, "normal", 30, rec);
+            enemy = new Enemy(20, 30f, "basic", 30, rec);
             map.SpawnEnemy(enemy);
             map.SaveNextState();
             Assert.AreEqual(map.SaveStates[0].enemies[2].Health, 20);
@@ -298,7 +298,7 @@ namespace ClassTests
             map.SpawnEnemy(enemy);
             map.SpawnEnemy(enemy);
             map.SaveNextState();
-            enemy = new Enemy(20, 30f, "normal", 30, rec);
+            enemy = new Enemy(20, 30f, "basic", 30, rec);
             map.SpawnEnemy(enemy);
             map.LoadPreviousState();
             Assert.AreEqual(map.Enemies[1].Health, 10);

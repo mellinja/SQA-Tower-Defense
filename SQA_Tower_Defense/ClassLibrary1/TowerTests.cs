@@ -19,7 +19,7 @@ namespace ClassTests
         [SetUp()]
         public void SetUp()
         {
-            map = new Map("normal", 0, 0);
+            map = new Map("normal", 0, 1);
             rec = new Rectangle(0, 0, 5, 5);
             tower = new Tower("", 10, 20, 30, 40, rec);
             enemy = new Enemy(10, 1.0f, "basic", 10, new Rectangle(30, 30, 50, 50));
@@ -30,7 +30,7 @@ namespace ClassTests
         [Test()]
         public void testInit()
         {
-            tower = new Tower("", 0, 0, 0, 0, rec);
+            tower = new Tower("", 1,10, 10, 10, rec);
             Assert.IsNotNull(tower);
         }
 

@@ -15,10 +15,10 @@ namespace SQA_Tower_Defense
         protected int attackDamage;
         protected int cost;
         protected int range;
-        protected int updateCounter;
+        public int updateCounter;
         Rectangle location;
         protected List<Enemy> nearbyEnemies;
-        protected int UpdateMax = 60;
+        public int UpdateMax = 60;
 
 
         public Tower (String name, int health, int damage, int cost, int range, Rectangle location)
@@ -103,10 +103,10 @@ namespace SQA_Tower_Defense
             {
                 updateCounter = 0;
                 Enemy attacking = this.getCurrentTarget();
-
+                Console.WriteLine(attacking);
                 if (attacking != null)
                 {
-                    this.AttackEnemy(attacking);
+                    attacking.Health -= this.attackDamage;
                     if (attacking.Health <= 0)
                         this.Enemies.Remove(attacking);
                 }
@@ -117,12 +117,15 @@ namespace SQA_Tower_Defense
         {
             Enemy attacking = null;
             double distanceToClosest = range;
-            foreach (Enemy e in Enemies)
+            for (int i = 0 ; i < Enemies.Count ; i++)
             {
-                double tCenterX = (this.Location.X + this.Location.Width) / 2;
-                double eCenterX = (e.Location.X + e.Location.Width) / 2;
-                double tCenterY = (this.Location.Y + this.Location.Height) / 2;
-                double eCenterY = (e.Location.Y + e.Location.Height) / 2;
+                Enemy e = this.Enemies[i];
+            //foreach (Enemy e in Enemies)
+            //{
+                double tCenterX = this.Location.X;
+                double eCenterX = e.Location.X;
+                double tCenterY = this.Location.Y;
+                double eCenterY = e.Location.Y;
 
                 double distance = Math.Sqrt((tCenterX - eCenterX) * (tCenterX - eCenterX) + (tCenterY - eCenterY) * (tCenterY - eCenterY));
 

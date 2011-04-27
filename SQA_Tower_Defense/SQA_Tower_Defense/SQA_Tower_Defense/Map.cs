@@ -176,17 +176,17 @@ namespace SQA_Tower_Defense
                 {
                     if (e.Health <= 0)
                     {
-                        this.enemiesOnMap.Remove(e);
+                        this.KillEnemy(e);
                     }
                     else
                     {
-                        double tCenterX = (t.Location.X + t.Location.Width) / 2;
-                        double eCenterX = (e.Location.X + e.Location.Width) / 2;
-                        double tCenterY = (t.Location.Y + t.Location.Height) / 2;
-                        double eCenterY = (e.Location.Y + e.Location.Height) / 2;
+                        double tCenterX = t.Location.X + t.Location.Width / 2;
+                        double eCenterX = e.Location.X + e.Location.Width / 2;
+                        double tCenterY = t.Location.Y + t.Location.Height / 2;
+                        double eCenterY = e.Location.Y + e.Location.Height / 2;
 
                         double distance = Math.Sqrt((tCenterX - eCenterX) * (tCenterX - eCenterX) + (tCenterY - eCenterY) * (tCenterY - eCenterY));
-                        if (t.Range <= distance)
+                        if (t.Range >= distance)
                             t.Enemies.Add(e);
                     }
 

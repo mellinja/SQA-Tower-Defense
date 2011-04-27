@@ -4,9 +4,10 @@ using SQA_Tower_Defense;
 using NUnit.Framework;
 using Microsoft.Xna.Framework;
 
-
 namespace ClassTests
 {
+
+[Ignore()]
     class TowerTestInteractionWithEnemiesWithsetup
     {
 
@@ -26,7 +27,7 @@ namespace ClassTests
             enemyPosition = new Rectangle(0, 0, 25, 25);
             enemy = new Enemy(10, 1.0f, "basic", 10, enemyPosition);
             tower = new Tower("Tower", 1, 1, 1, towerRange, towerPosition);
-            map = new Map("normal", 100, 0);
+            map = new Map("normal", 100, 1);
             map.PlaceTower(tower);
             map.SpawnEnemy(enemy);
 
