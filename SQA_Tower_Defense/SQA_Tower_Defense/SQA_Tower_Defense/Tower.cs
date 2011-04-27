@@ -15,8 +15,10 @@ namespace SQA_Tower_Defense
         protected int attackDamage;
         protected int cost;
         protected int range;
+        protected int updateCounter;
         Rectangle location;
         protected List<Enemy> nearbyEnemies;
+        protected int UpdateMax = 60;
 
 
         public Tower (String name, int health, int damage, int cost, int range, Rectangle location)
@@ -41,7 +43,7 @@ namespace SQA_Tower_Defense
             this.attackDamage = damage;
             this.cost = cost;
             this.range = range;
-
+            this.updateCounter = 0;
             this.nearbyEnemies = new List<Enemy>();
         }
 
@@ -52,8 +54,12 @@ namespace SQA_Tower_Defense
 
         public void AttackEnemy()
         {
-            if(nearbyEnemies.Count > 0)
+            if (nearbyEnemies.Count > 0)
                 nearbyEnemies[0].Health -= this.attackDamage;
+        }
+        public void AttackEnemy(Enemy e)
+        {
+                e.Health -= this.attackDamage;
         }
 
         public int Health
@@ -88,6 +94,36 @@ namespace SQA_Tower_Defense
             get { return this.location; }
             set { this.location = value; }
         }
-        
+
+
+        public void Update()
+        {
+            this.updateCounter++;
+            if (this.updateCounter == UpdateMax)
+            {
+                updateCounter = 0;
+                Enemy attacking = null;
+                double distanceToClosest = range;
+                foreach (Enemy e in Enemies)
+                {
+                    double tCenterX = (this.Location.X + this.Location.Width) / 2;
+                    double eCenterX = (e.Location.X + e.Location.Width) / 2;
+                    double tCenterY = (this.Location.Y + this.Location.Height) / 2;
+                    double eCenterY = (e.Location.Y + e.Location.Height) / 2;
+
+                    double distance = Math.Sqrt((tCenterX - eCenterX) * (tCenterX - eCenterX) + (tCenterY - eCenterY) * (tCenterY - eCenterY));
+
+                    if (distance <= distanceToClosest)
+                    {
+                        distanceToClosest = distance;
+                        attacking = e;
+                    }   
+                }
+                if (attacking != null)
+                {
+                    this.AttackEnemy(attacking);
+                }   
+            }
+        }
     }
 }

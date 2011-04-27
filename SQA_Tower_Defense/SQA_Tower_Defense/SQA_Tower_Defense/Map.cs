@@ -20,15 +20,6 @@ namespace SQA_Tower_Defense
             if (1 > difficulty || difficulty > 3)
                 throw new ArgumentOutOfRangeException();
 
-
-            if (1 > difficulty || difficulty > 3)
-                throw new ArgumentOutOfRangeException();
-
-
-            if (1 > difficulty || difficulty > 3)
-                throw new ArgumentOutOfRangeException();
-
-
             if (gametype != "normal")
                 throw new ArgumentException();
 
@@ -174,5 +165,34 @@ namespace SQA_Tower_Defense
         }
 
         #endregion
+
+
+        private void Update()
+        {
+            foreach (Tower t in this.towersOnMap)
+            {
+                t.Enemies.Clear();
+                foreach (Enemy e in this.enemiesOnMap)
+                {
+                    if (e.Health <= 0)
+                    {
+                        this.enemiesOnMap.Remove(e);
+                    }
+                    else
+                    {
+                        double tCenterX = (t.Location.X + t.Location.Width) / 2;
+                        double eCenterX = (e.Location.X + e.Location.Width) / 2;
+                        double tCenterY = (t.Location.Y + t.Location.Height) / 2;
+                        double eCenterY = (e.Location.Y + e.Location.Height) / 2;
+
+                        double distance = Math.Sqrt((tCenterX - eCenterX) * (tCenterX - eCenterX) + (tCenterY - eCenterY) * (tCenterY - eCenterY));
+                        if (t.Range <= distance)
+                            t.Enemies.Add(e);
+                    }
+
+                }
+            }
+
+        }
     }
 }

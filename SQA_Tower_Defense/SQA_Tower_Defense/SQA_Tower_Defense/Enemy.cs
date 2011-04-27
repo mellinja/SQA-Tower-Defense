@@ -57,6 +57,12 @@ namespace SQA_Tower_Defense
             
         }
 
+        public void moveTo(int x, int y)
+        {
+            this.location = new Rectangle(x, y, this.location.Width, this.location.Height);
+
+        }
+
         public int Health
         {
             get { return this.health; }

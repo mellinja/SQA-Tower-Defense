@@ -10,18 +10,18 @@ namespace ClassTests
     class TowerTestInteractionWithEnemiesWithsetup
     {
 
-        [Setup()]
+        [SetUp()]
         public void SetUp()
         {
-            Rectangle towerRange = 5;
+            int towerRange = 5;
             Rectangle towerPosition = new Rectangle(0, 50, 50, 50);
             Rectangle enemyPosition = new Rectangle(0, 0, 25, 25);
 
             Enemy enemy = new Enemy(10, 1.0f, "Enemy", 10, enemyPosition);
             Tower tower = new Tower("Tower", 1, 1, 1, towerRange, towerPosition);
             Map map = new Map("Gametype", 100, 0);
-            map.addTower(tower);
-            map.addEnemy(enemy);
+            map.PlaceTower(tower);
+            map.SpawnEnemy(enemy);
 
         }
         //Verifies that a tower does not attack an enemy outside of its range by checking the health of the enemy
@@ -85,7 +85,7 @@ namespace ClassTests
         {
             Tower tower2 = new Tower("Tower2", 10, 1, 10, 5, new Rectangle(50, 0, 50, 50)); //Second tower; enemy should still be within its range
 
-            map.addTower(tower2);
+            map.PlaceTower(tower2);
 
 
             enemy.Health = 2; //Manually set the enemy's health to 2 for the case of this test
@@ -111,11 +111,11 @@ namespace ClassTests
         public void EnemyMoveOutofRange()
         {
            //enemy can move out of range 
-           Enemy enemy2 = new Enemy (10, 1.0f, "basic",10 ,new Rectangle (34,34,54,54)
+           Enemy enemy2 = new Enemy (10, 1.0f, "basic",10 ,new Rectangle (34,34,54,54));
            tower.AddNearbyEnemy(enemy);
            tower.AddNearbyEnemy(enemy2);
-            tower.AttackEnemy(); 
-            Assert.AreNotEqual(enemy.Health, 10); 
+           tower.AttackEnemy(); 
+           Assert.AreNotEqual(enemy.Health, 10); 
            Assert.AreEqual(tower.Enemies.Count ,2);
            enemy.Moveto(5, 5);
            tower.Update();
@@ -168,7 +168,7 @@ namespace ClassTests
         public void twoTowerAttack()
         {
             //Testing that two towers can attack the same enemy
-            Tower tower2 = new Tower("", 10, 20, 30, 40, new Rectangle(4,4, 10,10);
+            Tower tower2 = new Tower("", 10, 20, 30, 40, new Rectangle(4,4, 10,10));
             Enemy enemy2 = new Enemy (10, 1.0f, "basic", 10, new Rectangle (34, 34, 54,54)); 
             tower.AddNearbyEnemy(enemy2); 
             tower2.AddNearbyEnemy(enemy2); 

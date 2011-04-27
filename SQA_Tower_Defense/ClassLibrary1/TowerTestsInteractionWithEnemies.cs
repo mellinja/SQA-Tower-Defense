@@ -20,10 +20,10 @@ namespace ClassTests
 			Enemy e2 = new Enemy(20, 0.0, "basic", 1, new Rectangle(0, 20, 5, 25)); // In range of tower and tower 2, closer to tower 2
 			
 			Map m = new Map("normal", 100, 1);
-			m.addTower(t1);
-			m.addTower(t2);
-			m.addEnemy(e2);
-			m.addEnemy(e2);
+			m.PlaceTower(t1);
+			m.PlaceTower(t2);
+			m.SpawnEnemy(e2);
+			m.SpawnEnemy(e2);
 			m.Update();//adds all the approiate enemies to the towers lists
 			t1.Update();
 			t2.Update();
@@ -41,9 +41,9 @@ namespace ClassTests
 			Enemy e2 = new Enemy(20, 0.0, "basic", 1, new Rectangle(110, 110, 115, 115)); 
 			
 			Map m = new Map("normal", 100, 1);
-			m.addTower(t1);
-			m.addEnemy(e2);
-			m.addEnemy(e2);
+			m.PlaceTower(t1);
+			m.SpawnEnemy(e2);
+			m.SpawnEnemy(e2);
 			m.Update();//adds all the approiate enemies to the towers lists
 			t1.Update();
 			Assert.AreEqual(e1, t1.getCurrentTarget());
@@ -61,8 +61,8 @@ namespace ClassTests
 			Tower t1 = new Tower("tower", 10, 1, 10, 10, new Rectangle(0, 0, 10, 10);
 			Enemy e1 = new Enemy(20, 0.0, "basic", 1, new Rectangle(150, 150, 155, 155)); //Out of t1's range
 			Map m = new Map("normal", 100, 1);
-			m.addTower(t1);
-			m.addEnemy(e1);
+			m.PlaceTower(t1);
+			m.SpawnEnemy(e1);
 			m.Update();//adds all the approiate enemies to the towers lists
 			t1.Update();
 			Assert.AreEqual(e1, t1.getEnemyList.get(0));
@@ -134,7 +134,7 @@ namespace ClassTests
         public void twoTowerAttack()
         {
             //Testing that two towers can attack the same enemy
-            Tower tower2 = new Tower("", 10, 20, 30, 40, new Rectangle(4,4, 10,10);
+            Tower tower2 = new Tower("", 10, 20, 30, 40, new Rectangle(4,4, 10,10));
             Enemy enemy2 = new Enemy (10, 1.0f, "basic", 10, new Rectangle (34, 34, 54,54)); 
             tower.AddNearbyEnemy(enemy2); 
             tower2.AddNearbyEnemy(enemy2); 
