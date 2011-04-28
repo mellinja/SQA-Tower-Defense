@@ -39,7 +39,6 @@ namespace ClassTests
             //Move the enemy outside of the tower's range
             enemy.moveTo(1000, 1000);
 
-
             //Update method for map causes the towers to add nearby enemies
             map.Update();
 
