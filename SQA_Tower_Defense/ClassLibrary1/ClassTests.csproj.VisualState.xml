@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1000]C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj</TopNode>
-  <SelectedNode>[0-1023]ClassTests.TowerTestInteractionWithEnemiesWithsetup.attackEvery60</SelectedNode>
+  <TopNode>[0-1000]C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj</TopNode>
+  <SelectedNode>[0-1058]ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyDestroyed</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1000]C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" Expanded="true" />
-    <Node UniqueName="[0-1078]C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" Expanded="true" />
-    <Node UniqueName="[0-1079]ClassTests" Expanded="true" />
-    <Node UniqueName="[0-1017]ClassTests.TowerTestInteractionWithEnemiesWithsetup" Expanded="true" />
-    <Node UniqueName="[0-1057]ClassTests.TowerTestsInteractionWithEnemies" Expanded="true" />
+    <Node UniqueName="[0-1000]C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" Expanded="true" />
+    <Node UniqueName="[0-1079]C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" Expanded="true" />
+    <Node UniqueName="[0-1080]ClassTests" Expanded="true" />
+    <Node UniqueName="[0-1049]ClassTests.TowerTestInteractionWithEnemiesWithsetup" Expanded="true" />
   </Nodes>
 </VisualState>

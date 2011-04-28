@@ -44,9 +44,9 @@ namespace ClassTests
         [Test()]
         public void testTowerChangesTarget()
         {
-			Tower t1 = new Tower("tower", 10, 1, 10, 100, new Rectangle(0, 0, 10, 10));
-			Enemy e1 = new Enemy(20, 1.0, "basic", 1, new Rectangle(50, 50, 55, 55)); 
-			Enemy e2 = new Enemy(20, 1.0, "basic", 1, new Rectangle(110, 110, 55, 55)); 
+			Tower t1 = new Tower("tower", 10, 1, 10, 100, new Rectangle(0, 0, 1, 11));
+			Enemy e1 = new Enemy(20, 1.0, "basic", 1, new Rectangle(30, 30, 1, 1)); 
+			Enemy e2 = new Enemy(20, 1.0, "basic", 1, new Rectangle(110, 110, 1, 1)); 
 			
 			Map m = new Map("normal", 100, 1);
 			m.PlaceTower(t1);
@@ -57,6 +57,7 @@ namespace ClassTests
 			Assert.AreEqual(e1, t1.getCurrentTarget());
 
 			e2.moveTo(25,25);
+            m.Update();
 			Assert.AreEqual(e2, t1.getCurrentTarget());
 			
 			

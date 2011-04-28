@@ -172,12 +172,13 @@ namespace SQA_Tower_Defense
         {
             foreach (Tower t in this.towersOnMap)
             {
+                List<Enemy> KillEnemyList = new List<Enemy>() ;
                 t.Enemies.Clear();
                 foreach (Enemy e in this.enemiesOnMap)
                 {
                     if (e.Health <= 0)
                     {
-                        this.KillEnemy(e);
+                        KillEnemyList.Add(e);
                     }
                     else
                     {
@@ -192,6 +193,11 @@ namespace SQA_Tower_Defense
                     }
 
                 }
+                foreach (Enemy e in KillEnemyList)
+                {
+                    KillEnemy(e);
+                }
+
             }
 
         }
