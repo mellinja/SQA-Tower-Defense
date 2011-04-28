@@ -29,6 +29,7 @@ namespace SQA_Tower_Defense
 
             
             this.gametype = gametype;
+            
             this.money = startingMoney;
             this.difficulty = difficulty;
             this.score = 0;

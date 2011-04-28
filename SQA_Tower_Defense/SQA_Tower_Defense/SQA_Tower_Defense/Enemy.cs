@@ -30,7 +30,7 @@ namespace SQA_Tower_Defense
                 throw new ArgumentOutOfRangeException();
             if (health <= 0)
                 throw new ArgumentOutOfRangeException();
-
+            
             if (type != "basic")
                 throw new ArgumentException();
 

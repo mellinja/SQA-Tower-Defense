@@ -65,9 +65,9 @@ namespace SQA_Tower_Defense
             gridSize = 25;
             gameTimer = 0;
             placingTower = new Tower("", 10, 10, 10, 10, new Rectangle(0, 0, 50, 50));
-            map = new Map("", 100, 0);
+            map = new Map("normal", 100, 1);
             towerTex = Content.Load<Texture2D>("Sprites\\Eiffel");
-            map.Enemies.Add(new Enemy(10, 10f, "", 10, new Rectangle(50, 50, 50, 50)));
+            map.Enemies.Add(new Enemy(10, 10f, "basic", 10, new Rectangle(50, 50, 50, 50)));
             
             // TODO: use this.Content to load your game content here
         }
@@ -93,7 +93,10 @@ namespace SQA_Tower_Defense
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            map.Update();
 
+            foreach (Tower t in map.Towers)
+                t.Update();
             UpdateInput();
 
             // TODO: Add your update logic here
@@ -152,7 +155,7 @@ namespace SQA_Tower_Defense
                     {
                         
                     }
-                    map.PlaceTower(new Tower("", 10, 10, 10, 10, placingTower.Location));
+                    map.PlaceTower(new Tower("", 10, 10, 10, 100, placingTower.Location));
 
                     placingTower = null;
                 }
@@ -173,7 +176,7 @@ namespace SQA_Tower_Defense
 
             if(boardState.IsKeyDown(Keys.D1) && previousKeyboardState.IsKeyUp(Keys.D1))
             {
-                placingTower = new Tower("", 10, 10, 10, 10, new Rectangle(mouseState.X - (mouseState.X % gridSize), mouseState.Y - (mouseState.Y % gridSize), 50, 50));
+                placingTower = new Tower("", 10, 10, 10, 100, new Rectangle(mouseState.X - (mouseState.X % gridSize), mouseState.Y - (mouseState.Y % gridSize), 50, 50));
             }
 
             if (boardState.IsKeyUp(Keys.LeftAlt))
@@ -189,6 +192,7 @@ namespace SQA_Tower_Defense
                 
                 gameTimer--;
                 map.LoadPreviousState();
+                
             }
 
 
