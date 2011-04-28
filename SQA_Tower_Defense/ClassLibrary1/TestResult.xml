@@ -1,45 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" total="9" errors="2" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-04-27" time="21:50:11">
+<test-results name="C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" total="3" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-04-27" time="21:53:48">
   <environment nunit-version="2.5.9.10348" clr-version="2.0.50727.4959" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1" machine-name="LOLWUT" user="Andeh" user-domain="LOLWUT" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Project" name="C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" executed="True" result="Failure" success="False" time="0.060" asserts="0">
+  <test-suite type="Project" name="C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" executed="True" result="Failure" success="False" time="0.030" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" executed="True" result="Failure" success="False" time="0.050" asserts="0">
+      <test-suite type="Assembly" name="C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" executed="True" result="Failure" success="False" time="0.020" asserts="0">
         <results>
-          <test-suite type="Namespace" name="ClassTests" executed="True" result="Failure" success="False" time="0.050" asserts="0">
+          <test-suite type="Namespace" name="ClassTests" executed="True" result="Failure" success="False" time="0.020" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="TowerTestInteractionWithEnemiesWithsetup" executed="True" result="Failure" success="False" time="0.050" asserts="0">
+              <test-suite type="TestFixture" name="TowerTestsInteractionWithEnemies" executed="True" result="Failure" success="False" time="0.020" asserts="0">
                 <results>
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.attackEvery60" executed="True" result="Success" success="True" time="0.000" asserts="61" />
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyDestroyed" executed="True" result="Error" success="False" time="0.000" asserts="1">
+                  <test-case name="ClassTests.TowerTestsInteractionWithEnemies.testTowerChangesTarget" executed="True" result="Failure" success="False" time="0.000" asserts="1">
                     <failure>
-                      <message><![CDATA[System.InvalidOperationException : Collection was modified; enumeration operation may not execute.]]></message>
-                      <stack-trace><![CDATA[at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
-at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
-at System.Collections.Generic.List`1.Enumerator.MoveNext()
-at SQA_Tower_Defense.Map.Update() in C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\Map.cs:line 176
-at ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyDestroyed() in C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\TowerTestInteractionWithEnemiesWithsetup.cs:line 231
+                      <message><![CDATA[  Expected: <SQA_Tower_Defense.Enemy>
+  But was:  null
+]]></message>
+                      <stack-trace><![CDATA[at ClassTests.TowerTestsInteractionWithEnemies.testTowerChangesTarget() in C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\TowerTestsInteractionWithEnemies.cs:line 57
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyMoveOutofRange" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyThatDiesWithinRangeOfTwoTowersGetsRemovedFromBothTowerLists" executed="True" result="Error" success="False" time="0.000" asserts="2">
-                    <failure>
-                      <message><![CDATA[System.InvalidOperationException : Collection was modified; enumeration operation may not execute.]]></message>
-                      <stack-trace><![CDATA[at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
-at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
-at System.Collections.Generic.List`1.Enumerator.MoveNext()
-at SQA_Tower_Defense.Map.Update() in C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\Map.cs:line 176
-at ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyThatDiesWithinRangeOfTwoTowersGetsRemovedFromBothTowerLists() in C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\TowerTestInteractionWithEnemiesWithsetup.cs:line 122
-]]></stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.MoveBothEnemyOutofRange" executed="True" result="Success" success="True" time="0.000" asserts="5" />
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.MultipleTowersCanAttackSingleEnemy" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.TowerAttacksAnEnemyInItsRange" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.TowerDoesNotAttackEnemyOutsideItsRange" executed="True" result="Success" success="True" time="0.010" asserts="2" />
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.TowerStopsAttackingEnemyOnceItMovesOutsideOfRange" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="ClassTests.TowerTestsInteractionWithEnemies.testTowerUpdatesEnemiesList" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="ClassTests.TowerTestsInteractionWithEnemies.testTwoTowerswithTwoEnemies" executed="True" result="Success" success="True" time="0.000" asserts="4" />
                 </results>
               </test-suite>
             </results>
