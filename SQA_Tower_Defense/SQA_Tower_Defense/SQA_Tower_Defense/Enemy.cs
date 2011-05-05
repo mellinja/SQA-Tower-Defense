@@ -12,7 +12,7 @@ namespace SQA_Tower_Defense
     public class Enemy
     {
 
-        protected int health;
+        protected int health, maxHealth;
         protected int gold;
         protected double speed;
         protected String type;
@@ -38,6 +38,7 @@ namespace SQA_Tower_Defense
                 throw new ArgumentException();
 
             
+            this.maxHealth = health;
             this.health = health;
             this.speed = speed;
             this.type = type;
@@ -47,10 +48,9 @@ namespace SQA_Tower_Defense
         }
 
         //Moves the enemy buy 1 unit down and 1 unit left (1 line)
-        public void Move() 
+        public void Move()
         {
             this.location = new Rectangle(location.X + 1, location.Y + 1, location.Height, location.Width);
-            
         }
 
 
@@ -60,6 +60,23 @@ namespace SQA_Tower_Defense
             this.location = new Rectangle(x, y, this.location.Width, this.location.Height);
 
         }
+
+        public void DrawHealth(Texture2D texture, SpriteBatch spriteBatch)
+        {
+
+            Color barColor;
+            if (HealthPercentage < 0.30)
+                barColor = Color.Red;
+            else if (HealthPercentage < 0.70)
+                barColor = Color.Yellow;
+            else
+                barColor = Color.Green;
+            Rectangle barLocation = new Rectangle(this.location.X, this.location.Y + this.location.Height, (int)(this.location.Width * HealthPercentage), 20);
+
+            spriteBatch.Draw(texture, barLocation, barColor);
+
+        }
+
 
 
         //Getters and setters for fields in the Enemy class (8 lines)
@@ -85,6 +102,15 @@ namespace SQA_Tower_Defense
         {
             get { return this.location; }
             set { this.Location = value; }
+        }
+        public int MaxHealth
+        {
+            get { return this.maxHealth; }
+        }
+
+        public float HealthPercentage
+        {
+            get { return (float)health / (float)maxHealth; }
         }
 
     }

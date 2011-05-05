@@ -18,6 +18,7 @@ namespace SQA_Tower_Defense
         Wave wave;
         int updateCounter = 0;
         int UPDATE_MAX = 5;
+        bool rewinding;
 
 
         //Constructs a game Map, which does most of the work load of the game (13 lines)
@@ -126,6 +127,11 @@ namespace SQA_Tower_Defense
         {
             get { return this.saveStates; }
         }
+        public bool Rewinding
+        {
+            get { return this.rewinding; }
+            set { this.rewinding = value; }
+        }
 
 
         #endregion
@@ -155,7 +161,8 @@ namespace SQA_Tower_Defense
             for (int i = 0; i < this.Enemies.Count; i++)
             {
                 Enemy temp = this.Enemies[i];
-                Enemy enemy = new Enemy(temp.Health, temp.Speed, temp.Type, temp.Gold, temp.Location);
+                Enemy enemy = new Enemy(temp.MaxHealth, temp.Speed, temp.Type, temp.Gold, temp.Location);
+                enemy.Health = temp.Health;
                 nextState.enemies.Add(enemy);
             }
             nextState.score = this.Score;
@@ -180,7 +187,8 @@ namespace SQA_Tower_Defense
             for (int i = 0; i < previousState.enemies.Count; i++)
             {
                 Enemy temp = previousState.enemies[i];
-                Enemy enemy = new Enemy(temp.Health, temp.Speed, temp.Type, temp.Gold, temp.Location);
+                Enemy enemy = new Enemy(temp.MaxHealth, temp.Speed, temp.Type, temp.Gold, temp.Location);
+                enemy.Health = temp.Health;
                 this.Enemies.Add(enemy);
             }
             this.saveStates.RemoveAt(saveStates.Count - 1);
@@ -194,7 +202,8 @@ namespace SQA_Tower_Defense
         {
             foreach (Enemy e in this.enemiesOnMap)
             {
-                e.Move();
+                if(!rewinding)
+                    e.Move();
             }
             updateCounter++;
             if (updateCounter == UPDATE_MAX)

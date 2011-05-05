@@ -137,8 +137,8 @@ namespace SQA_Tower_Defense
                 double tCenterY = this.Location.Y;
                 double eCenterY = e.Location.Y;
 
-                double distance = Math.Sqrt((tCenterX - eCenterX) * (tCenterX - eCenterX) + (tCenterY - eCenterY) * (tCenterY - eCenterY));
-
+                double distance = DistanceFrom(new Vector2((float)eCenterX, (float)eCenterY));//Math.Sqrt((tCenterX - eCenterX) * (tCenterX - eCenterX) + (tCenterY - eCenterY) * (tCenterY - eCenterY));
+                
                 if (distance <= distanceToClosest)
                 {
                     distanceToClosest = distance;
@@ -146,6 +146,18 @@ namespace SQA_Tower_Defense
                 }
             }
             return attacking;
+        }
+
+        public double DistanceFrom(Vector2 enemy)
+        {
+            return Math.Sqrt((this.location.Center.X - enemy.X) * (this.location.Center.X - enemy.X) + (this.location.Center.Y - enemy.Y) * (this.location.Center.Y - enemy.Y));
+
+        }
+
+
+        public Tower Clone()
+        {
+            return new Tower(this.Name, this.Health, this.attackDamage, this.Cost, this.Range, this.Location);
         }
     }
 }
