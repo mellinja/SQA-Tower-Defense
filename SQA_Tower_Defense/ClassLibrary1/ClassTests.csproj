@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CellTests.cs" />
-    <Compile Include="EnemyMovementTests.cs" />
+    <Compile Include="EnemyMovementTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TowerTestInteractionWithEnemiesWithsetup.cs" />
     <Compile Include="TowerTestsInteractionWithEnemies.cs" />
     <Compile Include="EnemyTests.cs" />

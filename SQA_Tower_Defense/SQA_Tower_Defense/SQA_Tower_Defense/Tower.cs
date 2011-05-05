@@ -7,6 +7,8 @@ using Microsoft.Xna.Framework;
 
 namespace SQA_Tower_Defense
 {
+
+    //Towers try to destroy enemies and protect the castle
     public class Tower
     {
         protected String name;
@@ -20,7 +22,7 @@ namespace SQA_Tower_Defense
         protected List<Enemy> nearbyEnemies;
         public int UpdateMax = 60;
 
-
+        //Contructs a tower. Throws exceptions for invalid ranges of values (18 lines)
         public Tower (String name, int health, int damage, int cost, int range, Rectangle location)
         {
 
@@ -47,21 +49,28 @@ namespace SQA_Tower_Defense
             this.nearbyEnemies = new List<Enemy>();
         }
 
+
+        //Adds an enemy to the enemy list for this tower (1 line)
         public void AddNearbyEnemy(Enemy enemy)
         {
             nearbyEnemies.Add(enemy);
         }
 
+        //Attacks nearest enemy, reducing its health by the towers damage stat (2 lines)
         public void AttackEnemy()
         {
             if (nearbyEnemies.Count > 0)
                 nearbyEnemies[0].Health -= this.attackDamage;
         }
+
+        //Attacks enemy e (1 line)
         public void AttackEnemy(Enemy e)
         {
                 e.Health -= this.attackDamage;
         }
 
+
+        //getters and setters for the fields of a tower (9 lines)
         public int Health
         {
             get { return this.health; }
@@ -96,6 +105,8 @@ namespace SQA_Tower_Defense
         }
 
 
+
+        //Updates the towers information. Attacks enemies if they are close enough and the updateCounter is on the correct values (8 lines)
         public void Update()
         {
             this.updateCounter++;
@@ -112,6 +123,8 @@ namespace SQA_Tower_Defense
             }
         }
 
+
+        //Returns the closest enemy in the enemies list, using the distance formula (13 lines)
         public Enemy getCurrentTarget()
         {
             Enemy attacking = null;
@@ -119,8 +132,6 @@ namespace SQA_Tower_Defense
             for (int i = 0 ; i < Enemies.Count ; i++)
             {
                 Enemy e = this.Enemies[i];
-            //foreach (Enemy e in Enemies)
-            //{
                 double tCenterX = this.Location.X;
                 double eCenterX = e.Location.X;
                 double tCenterY = this.Location.Y;

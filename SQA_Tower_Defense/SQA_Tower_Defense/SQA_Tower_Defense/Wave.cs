@@ -12,7 +12,7 @@ namespace SQA_Tower_Defense
         int updateTimer;
 
 
-        //Initializes the wave, which contains a stack of enemies of the same type, haveing "count" enemies in the stack to start with
+        //Initializes the wave, which contains a stack of enemies of the same type, haveing "count" enemies in the stack to start with (8 lines)
         public Wave(Enemy enemy, int count)
         {
             updateTimer = 0;
@@ -29,7 +29,7 @@ namespace SQA_Tower_Defense
         }
 
 
-        //Returns the top enemy on the stack, unless stack is empty
+        //Returns the top enemy on the stack, unless stack is empty (4 lines)
         public Enemy getEnemy()
         {
             if (waveEnemies.Count == 0)

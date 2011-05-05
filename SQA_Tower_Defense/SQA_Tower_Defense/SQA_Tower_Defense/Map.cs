@@ -18,6 +18,8 @@ namespace SQA_Tower_Defense
         int updateCounter = 0;
         int UPDATE_MAX = 5;
 
+
+        //Constructs a game Map, which does most of the work load of the game (13 lines)
         public Map(String gametype, int startingMoney, int difficulty)
         {
             if (1 > difficulty || difficulty > 3)
@@ -43,6 +45,8 @@ namespace SQA_Tower_Defense
             this.saveStates = new List<SaveState>();
         }
 
+
+        //Places a tower if not other towers are at that location if the user has enough money (6 lines)
         public void PlaceTower(Tower tower)
         {
             for (int i = 0; i < towersOnMap.Count; i++)
@@ -57,29 +61,35 @@ namespace SQA_Tower_Defense
             }
         }
 
+
+        //Sells a tower, adding .75 times its original cost to the bank (8 lines)
         public void SellTower(Tower tower)
         {
             towersOnMap.Remove(tower);
             money += (int) (tower.Cost * 0.75);
         }
 
+
+        //Adds an Enemy to that map (1 line)
         public void SpawnEnemy(Enemy enemy)
         {
             enemiesOnMap.Add(enemy);
         }
 
+        //Removes an enemy, giveing the user its money (2 lines)
         public void KillEnemy(Enemy enemy)
         {
             enemiesOnMap.Remove(enemy);
             money += enemy.Gold;
         }
 
+        //sets Wave w to the current wave of enemies (1 line)
         public void newWave(Wave w)
         {
             this.wave = w;
         }
 
-
+        //Getters and Setters for the fields of the map class (11 lines)
         #region Getters/Setters
         
         public String Gametype
@@ -119,6 +129,8 @@ namespace SQA_Tower_Defense
 
         #endregion
 
+
+        //Save state creation and loading (31 lines)
         #region Save States
 
         public struct SaveState
@@ -176,6 +188,7 @@ namespace SQA_Tower_Defense
         #endregion
 
 
+        //Spawns enemies off the wave stack, then adds enemies to each towers lists, then removes dead enemies (27 lines)
         public void Update()
         {
             foreach (Enemy e in this.enemiesOnMap)
