@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 namespace SQA_Tower_Defense
 {
 
-    //Towers try to destroy enemies and protect the castle
+    //Towers try to destroy enemies and protect the castle (52 lines)
     public class Tower
     {
         protected String name;

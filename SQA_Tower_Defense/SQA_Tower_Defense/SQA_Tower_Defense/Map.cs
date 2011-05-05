@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SQA_Tower_Defense
 {
+    //100 lines
     public class Map
     {
 
@@ -75,7 +76,7 @@ namespace SQA_Tower_Defense
         {
             enemiesOnMap.Add(enemy);
         }
-
+        
         //Removes an enemy, giveing the user its money (2 lines)
         public void KillEnemy(Enemy enemy)
         {

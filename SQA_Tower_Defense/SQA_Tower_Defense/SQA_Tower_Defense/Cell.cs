@@ -6,7 +6,7 @@ using System.Text;
 namespace SQA_Tower_Defense
 {
 
-    //Cell class holds units for path finding algorithms 
+    //Cell class holds units for path finding algorithms (4 lines)
     public class Cell
     {
         Boolean Occupied;

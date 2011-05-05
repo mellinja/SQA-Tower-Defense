@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SQA_Tower_Defense
 {
+    //12 lines
     public class Wave
     {
 

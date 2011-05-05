@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace SQA_Tower_Defense
 {
 
-    //Enemies main goal is to destroy Castles and towers. 
+    //Enemies main goal is to destroy Castles and towers. (25 lines)
     public class Enemy
     {
 
