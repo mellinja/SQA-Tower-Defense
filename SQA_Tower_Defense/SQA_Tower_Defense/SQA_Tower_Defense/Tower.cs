@@ -103,7 +103,6 @@ namespace SQA_Tower_Defense
             {
                 updateCounter = 0;
                 Enemy attacking = this.getCurrentTarget();
-                Console.WriteLine(attacking);
                 if (attacking != null)
                 {
                     attacking.Health -= this.attackDamage;

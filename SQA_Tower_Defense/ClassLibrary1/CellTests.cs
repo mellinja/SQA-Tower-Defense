@@ -25,6 +25,7 @@ namespace ClassTests
         [Test]
         public void CellHasOccupied()
         {
+            Cell cell = new Cell();
             cell.Occupy(new Enemy(10, 4, "basic", 4, new Rectangle(1, 1, 1, 1)));
             Assert.IsTrue(cell.isOccupied());
         }

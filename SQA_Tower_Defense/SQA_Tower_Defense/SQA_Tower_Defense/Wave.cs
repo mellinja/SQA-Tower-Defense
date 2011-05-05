@@ -11,42 +11,34 @@ namespace SQA_Tower_Defense
         Stack<Enemy> waveEnemies;
         int updateTimer;
 
+
+        //Initializes the wave, which contains a stack of enemies of the same type, haveing "count" enemies in the stack to start with
         public Wave(Enemy enemy, int count)
         {
             updateTimer = 0;
-
             waveEnemies = new Stack<Enemy>();
-
-
-
-            
+            if(null == enemy)
+               throw new ArgumentNullException();
+            if (count <= 0)
+                throw new ArgumentOutOfRangeException();
             for (int i = 0; i < count; i++)
             {
-                waveEnemies.Push(enemy);
+                waveEnemies.Push(new Enemy(enemy.Health,enemy.Speed,enemy.Type,enemy.Gold,enemy.Location));
             }
 
         }
 
-        //Wasn't sure how we wanted to do this part :(
-     /*   public Enemy Update()
-        {
-            updateTimer++;
-            if (updateTimer == 10)
-            {
-                updateTimer = 0;
 
+        //Returns the top enemy on the stack, unless stack is empty
+        public Enemy getEnemy()
+        {
+            if (waveEnemies.Count == 0)
+                return null;
+            else
                 return waveEnemies.Pop();
 
-            }
-            else
-            {
-                return null;
-            }
 
+        }
 
-        } 
-      * 
-      * */
-        
     }
 }

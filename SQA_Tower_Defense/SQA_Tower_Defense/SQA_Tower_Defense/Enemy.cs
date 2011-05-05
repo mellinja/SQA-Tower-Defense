@@ -45,15 +45,7 @@ namespace SQA_Tower_Defense
 
         public void Move()
         {
-            if (this.location.X > random.Next(60)*100)
-                xDirection *= -1;
-            if (this.Location.X < 20)
-                xDirection *= -1;
-            if (this.Location.Y > random.Next(60)*100)
-                yDirection *= -1;
-            if (this.Location.Y < 20)
-                yDirection *= -1;
-            this.location = new Rectangle(location.X + xDirection, location.Y + yDirection, 50, 50);
+            this.location = new Rectangle(location.X + 1, location.Y + 1, location.Height, location.Width);
             
         }
 

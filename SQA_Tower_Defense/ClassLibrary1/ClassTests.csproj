@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CellTests.cs" />
+    <Compile Include="EnemyMovementTests.cs" />
     <Compile Include="TowerTestInteractionWithEnemiesWithsetup.cs" />
     <Compile Include="TowerTestsInteractionWithEnemies.cs" />
     <Compile Include="EnemyTests.cs" />
@@ -52,6 +54,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="TowerTests.cs" />
+    <Compile Include="WaveTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense.csproj">

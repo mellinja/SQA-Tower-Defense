@@ -12,8 +12,11 @@ namespace SQA_Tower_Defense
         int money, score;
         int difficulty;
         List<Tower> towersOnMap;
-        List<Enemy> enemiesOnMap;
+        public List<Enemy> enemiesOnMap;
         List<SaveState> saveStates;
+        Wave wave;
+        int updateCounter = 0;
+        int UPDATE_MAX = 5;
 
         public Map(String gametype, int startingMoney, int difficulty)
         {
@@ -71,6 +74,10 @@ namespace SQA_Tower_Defense
             money += enemy.Gold;
         }
 
+        public void newWave(Wave w)
+        {
+            this.wave = w;
+        }
 
 
         #region Getters/Setters
@@ -171,6 +178,29 @@ namespace SQA_Tower_Defense
 
         public void Update()
         {
+            foreach (Enemy e in this.enemiesOnMap)
+            {
+                e.Move();
+            }
+            updateCounter++;
+            if (updateCounter == UPDATE_MAX)
+            {
+                if (wave != null)
+                {
+                    Enemy e = wave.getEnemy();
+                    if (e != null)
+                    {
+                        this.enemiesOnMap.Add(e);
+                    }
+                    else
+                    {
+                        wave = null;
+                    }
+
+                }
+            }
+
+
             foreach (Tower t in this.towersOnMap)
             {
                 List<Enemy> KillEnemyList = new List<Enemy>() ;
