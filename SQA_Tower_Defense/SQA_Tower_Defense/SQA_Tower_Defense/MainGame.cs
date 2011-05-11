@@ -43,7 +43,7 @@ namespace SQA_Tower_Defense
 
         public void Initialize(int i)
         {
-            this.Initialize();
+            base.Initialize();
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace SQA_Tower_Defense
 
             this.IsMouseVisible = true;
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteBatch = new SpriteBatch(this.GraphicsDevice);
             font = Content.Load<SpriteFont>("font");
             toolTipFont = Content.Load<SpriteFont>("tooltipfont");
             gridSize = 25;

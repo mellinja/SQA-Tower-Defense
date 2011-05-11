@@ -12,6 +12,7 @@ namespace ClassTests
     [TestFixture()]
     class EnemyMovementTestsWithCastle
     {
+        /*
         Map map;
         Rectangle rec;
         Tower tower;
@@ -108,7 +109,7 @@ namespace ClassTests
             map.Update();
             Assert.AreEqual(map.enemiesOnMap[0].Location, new Rectangle(1, 99, 1, 1));
         }
-
+        */
 
 
     }

@@ -12,6 +12,9 @@ namespace ClassTests
     [TestFixture()]
     public class CastleTests
     {
+
+        /*
+        
         //Tests init of Castle
         [Test()]
         public void CastleInitTest()
@@ -66,5 +69,7 @@ namespace ClassTests
             Assert.AreEqual(map.enemiesOnMap[0].Location, new Rectangle(12,12,12,12));
             
         }
+         */
     }
+         
 }
