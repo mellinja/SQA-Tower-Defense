@@ -31,3 +31,5 @@ C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower
 C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\obj\x86\Debug\SQA_Tower_Defense.pdb
 C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\Content\Sprites\Blank.xnb
 C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\Content\tooltipfont.xnb
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\Content\Sprites\Blank.xnb
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\Content\tooltipfont.xnb

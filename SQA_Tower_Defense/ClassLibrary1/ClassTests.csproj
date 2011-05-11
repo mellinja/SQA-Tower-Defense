@@ -42,10 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CastleTests.cs" />
     <Compile Include="CellTests.cs" />
     <Compile Include="EnemyMovementTests.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EnemyMovementTestsWithCastle.cs" />
+    <Compile Include="MainGameTests.cs" />
     <Compile Include="TowerTestInteractionWithEnemiesWithsetup.cs" />
     <Compile Include="TowerTestsInteractionWithEnemies.cs" />
     <Compile Include="EnemyTests.cs" />
