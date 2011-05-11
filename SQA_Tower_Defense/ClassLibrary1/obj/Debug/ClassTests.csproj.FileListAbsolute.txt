@@ -22,3 +22,5 @@ C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower
 C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\nunit.framework.xml
 C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\Content\Sprites\Blank.xnb
 C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\Content\tooltipfont.xnb
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\Content\Sprites\Blank.xnb
+C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\Content\tooltipfont.xnb

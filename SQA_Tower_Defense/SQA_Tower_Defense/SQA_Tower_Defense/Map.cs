@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +9,7 @@ namespace SQA_Tower_Defense
     public class Map
     {
 
+        Castle castle;
         String gametype;
         int money, score;
         int difficulty;
@@ -19,6 +20,7 @@ namespace SQA_Tower_Defense
         int updateCounter = 0;
         int UPDATE_MAX = 5;
         bool rewinding;
+        bool gameEndCondition;
 
 
         //Constructs a game Map, which does most of the work load of the game (13 lines)
@@ -34,17 +36,19 @@ namespace SQA_Tower_Defense
             if (startingMoney < 0)
                 throw new ArgumentOutOfRangeException();
 
-            
+
             this.gametype = gametype;
-            
+
             this.money = startingMoney;
-            
+
             this.difficulty = difficulty;
             this.score = 0;
 
             this.towersOnMap = new List<Tower>();
             this.enemiesOnMap = new List<Enemy>();
             this.saveStates = new List<SaveState>();
+
+            this.gameEndCondition = false;
         }
 
 
@@ -63,12 +67,25 @@ namespace SQA_Tower_Defense
             }
         }
 
+        public void PlaceCastle(Castle c)
+        {
+            if (castle != null) return;
+
+            for (int i = 0; i < towersOnMap.Count; i++)
+            {
+                if (c.Location.Intersects(towersOnMap[i].Location))
+                    return;
+            }
+            castle = c;
+
+        }
+
 
         //Sells a tower, adding .75 times its original cost to the bank (8 lines)
         public void SellTower(Tower tower)
         {
             towersOnMap.Remove(tower);
-            money += (int) (tower.Cost * 0.75);
+            money += (int)(tower.Cost * 0.75);
         }
 
 
@@ -77,7 +94,7 @@ namespace SQA_Tower_Defense
         {
             enemiesOnMap.Add(enemy);
         }
-        
+
         //Removes an enemy, giveing the user its money (2 lines)
         public void KillEnemy(Enemy enemy)
         {
@@ -93,7 +110,7 @@ namespace SQA_Tower_Defense
 
         //Getters and Setters for the fields of the map class (11 lines)
         #region Getters/Setters
-        
+
         public String Gametype
         {
             get { return this.gametype; }
@@ -133,6 +150,15 @@ namespace SQA_Tower_Defense
             set { this.rewinding = value; }
         }
 
+        public bool GameOver
+        {
+            get { return this.gameEndCondition; }
+        }
+
+        public Castle Castle
+        {
+            get { return this.castle; }
+        }
 
         #endregion
 
@@ -200,9 +226,19 @@ namespace SQA_Tower_Defense
         //Spawns enemies off the wave stack, then adds enemies to each towers lists, then removes dead enemies (27 lines)
         public void Update()
         {
+            if (null != castle)
+            {
+                if (castle.Health <= 0)
+                {
+                    gameEndCondition = true;
+                    castle = null;
+                }
+            }
+
+            if (gameEndCondition == true) return;
             foreach (Enemy e in this.enemiesOnMap)
             {
-                if(!rewinding)
+                if (!rewinding)
                     e.Move();
             }
             updateCounter++;
@@ -226,7 +262,7 @@ namespace SQA_Tower_Defense
 
             foreach (Tower t in this.towersOnMap)
             {
-                List<Enemy> KillEnemyList = new List<Enemy>() ;
+                List<Enemy> KillEnemyList = new List<Enemy>();
                 t.Enemies.Clear();
                 foreach (Enemy e in this.enemiesOnMap)
                 {
@@ -253,7 +289,6 @@ namespace SQA_Tower_Defense
                 }
 
             }
-
         }
     }
 }

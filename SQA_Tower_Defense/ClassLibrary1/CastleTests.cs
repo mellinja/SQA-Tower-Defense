@@ -8,18 +8,18 @@ using Microsoft.Xna.Framework;
 
 namespace ClassTests
 {
-    [Ignore()]
+
     [TestFixture()]
     public class CastleTests
     {
 
-        /*
-        
+
+
         //Tests init of Castle
         [Test()]
         public void CastleInitTest()
         {
-            Castle c = new Castle(100, new Rectangle(1,1,1,1));
+            Castle c = new Castle(100, new Rectangle(1, 1, 1, 1));
             Assert.IsNotNull(c);
         }
         // Tests that castles with zero health on init throws error
@@ -40,20 +40,25 @@ namespace ClassTests
 
         // Tests that castles with null recatangle (0 width and length) throws exception
         [Test()]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void CastleInitTestBadLocation()
         {
-            Castle c = new Castle(-1, new Rectangle(1, 1,0,0));
+            Castle c = new Castle(1, new Rectangle(1, 1, 0, 0));
         }
 
         //Castle can be destroyed (removed from map)
         [Test()]
         public void castleCanBeDestroyed()
         {
+
+
             Map map = new Map("normal", 100000, 1);
-            Map.addCastle(new Castle(1, new Rectangle(1, 1,0,0)));
-            Map.damageCastle(1);
-            Assert.IsNull(map.getCastle);
+            map.PlaceCastle(new Castle(1, new Rectangle(1, 1, 1, 1)));
+            Assert.IsNotNull(map.Castle);
+            map.Castle.takeDamage(1);
+            map.Update();
+            Assert.IsNull(map.Castle);
+
         }
 
 
@@ -62,14 +67,14 @@ namespace ClassTests
         public void castleCanBeDestroyedStopsAll()
         {
             Map map = new Map("normal", 100000, 1);
-            Map.addCastle(new Castle(1, new Rectangle(1, 1,0,0)));
-            map.SpawnEnemy(new Enemy(1,1,"basic",1, new Rectangle(12,12,12,12)));
-            map.damageCastle(1);
+            map.PlaceCastle(new Castle(1, new Rectangle(1, 1, 1, 1)));
+            map.SpawnEnemy(new Enemy(1, 1, "basic", 1, new Rectangle(12, 12, 12, 12)));
+            map.Castle.takeDamage(1);
             map.Update();
-            Assert.AreEqual(map.enemiesOnMap[0].Location, new Rectangle(12,12,12,12));
-            
+            Assert.AreEqual(map.enemiesOnMap[0].Location, new Rectangle(12, 12, 12, 12));
+
         }
-         */
+
     }
-         
+
 }

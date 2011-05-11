@@ -73,7 +73,7 @@ namespace SQA_Tower_Defense
 
             this.IsMouseVisible = true;
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(this.GraphicsDevice);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("font");
             toolTipFont = Content.Load<SpriteFont>("tooltipfont");
             gridSize = 25;
