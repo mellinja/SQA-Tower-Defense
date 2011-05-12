@@ -62,8 +62,8 @@ namespace SQA_Tower_Defense
 
 
             spriteBatch.DrawString(tipFont, enemy.Type + " enemy", new Vector2(tipBackground.X, tipBackground.Y), Color.White);
-            spriteBatch.DrawString(tipFont, "Health: " + enemy.HealthPercentage * 100 + "%", new Vector2(tipBackground.X, tipBackground.Y + 15), Color.White);
-            spriteBatch.DrawString(tipFont, "Speed: " + enemy.Speed, new Vector2(tipBackground.X, tipBackground.Y + 30), Color.White);
+            spriteBatch.DrawString(tipFont, "Health: " + enemy.HealthPercentage * 100 + "%" + "\nSpeed: " +enemy.Speed, new Vector2(tipBackground.X, tipBackground.Y + 15), Color.White);
+            //spriteBatch.DrawString(tipFont, "Speed: " + enemy.Speed, new Vector2(tipBackground.X, tipBackground.Y + 30), Color.White);
 
         }
 

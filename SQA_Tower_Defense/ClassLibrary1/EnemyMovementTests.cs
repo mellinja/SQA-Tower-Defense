@@ -22,6 +22,7 @@ namespace ClassTests
         public void SetUp()
         {
 
+          
           map = new Map("normal", 100000, 1);
            rec = new Rectangle(0, 0, 5, 5);
           tower = new Tower("basic", 10, 20, 30, 40, new Rectangle(1,0,1,1));

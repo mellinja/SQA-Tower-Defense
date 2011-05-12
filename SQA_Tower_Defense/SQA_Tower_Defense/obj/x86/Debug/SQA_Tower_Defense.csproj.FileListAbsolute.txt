@@ -1,9 +1,0 @@
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\SQA_Tower_Defense.exe
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\SQA_Tower_Defense.pdb
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\nunit.framework.dll
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\nunit.mocks.dll
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\bin\x86\Debug\nunit.framework.xml
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\obj\x86\Debug\SQA_Tower_Defense.exe
-C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\obj\x86\Debug\SQA_Tower_Defense.pdb
