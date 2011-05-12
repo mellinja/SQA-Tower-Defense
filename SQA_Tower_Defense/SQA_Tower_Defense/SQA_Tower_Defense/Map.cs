@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace SQA_Tower_Defense
 {
@@ -66,7 +67,7 @@ namespace SQA_Tower_Defense
                 money -= tower.Cost;
             }
         }
-
+        //Places the destination castle on the map; the location cannot conflict or intersect with any of the towers already placed on the map.
         public void PlaceCastle(Castle c)
         {
             if (castle != null) return;
@@ -76,9 +77,29 @@ namespace SQA_Tower_Defense
                 if (c.Location.Intersects(towersOnMap[i].Location))
                     return;
             }
+
+            foreach (Enemy e in enemiesOnMap)
+            {
+                e.Castle = c;
+            }
             castle = c;
 
         }
+        //Checks to see if the given rectangle (location) intersects with any of the towers currently placed on the map.
+        public bool isConflicting(Rectangle rectangle)
+	{
+		foreach(Tower t in this.Towers)
+{
+	if(rectangle.Intersects(t.Location))
+	{
+		return true;
+	}
+}
+
+return false;	
+	
+	
+	}
 
 
         //Sells a tower, adding .75 times its original cost to the bank (8 lines)
@@ -92,6 +113,8 @@ namespace SQA_Tower_Defense
         //Adds an Enemy to that map (1 line)
         public void SpawnEnemy(Enemy enemy)
         {
+            enemy.Map = this;
+            enemy.Castle = this.castle;
             enemiesOnMap.Add(enemy);
         }
 

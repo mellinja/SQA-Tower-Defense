@@ -33,11 +33,12 @@ namespace SQA_Tower_Defense
         public int gameTimer;
 
         public Map map;
+        public bool hasrun = false;
 
         public MainGame()
         {
             graphics = new GraphicsDeviceManager(this);
-            //graphics.IsFullScreen = true;
+            graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
         }
 
@@ -55,7 +56,9 @@ namespace SQA_Tower_Defense
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            
             base.Initialize();
+
         }
 
         public void LoadContent(int i)
@@ -71,6 +74,7 @@ namespace SQA_Tower_Defense
         protected override void LoadContent()
         {
 
+            this.hasrun = true;
             this.IsMouseVisible = true;
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);

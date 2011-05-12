@@ -45,7 +45,7 @@ namespace SQA_Tower_Defense
 
         public Rectangle Location
         {
-            get { return this.Location; }
+            get { return this.location; }
             set { this.location = value; }
         }
 

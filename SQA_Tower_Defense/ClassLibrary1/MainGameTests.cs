@@ -18,21 +18,20 @@ namespace ClassTests
         public void SetUp()
         {
             towerGame = new MainGame();
-            towerGame.Initialize(1);
+            towerGame.Run();
         }
 
 
         [Test()]
         public void GameInitializesSuccessfully()
         {
-           
             Assert.IsNotNull(towerGame);
         }
 
         [Test()]
         public void LoadContentLoadsMouseStatusSuccessfully()
         {
-            towerGame.LoadContent(1);
+            // towerGame.LoadContent(1);
 
             Assert.AreEqual(true, towerGame.isMouseVisible);
         }
