@@ -1,0 +1,71 @@
+[Setup()]   
+
+Enemy e = new Enemy(10, 1.0f, "basic", 10, new Rectangle(7, 8, 1, 1));
+        Map m = new Map(“normal”,100,100)
+        map.StandardEnemy(e);//Allows the map to create waves of this enemy
+
+    //Test that after 5000 updates, map creates a new Wave
+    [Test()]
+    public void TestAutoWave()
+    {
+        for (int i = 0:i<5000;i++)
+        {
+            map.Update();//Callls 4999 updates
+
+}
+
+Assert.isNull(map.currentWave);
+
+map.Update();//5000th update
+
+Assert.isNotNull(map.currentWave);
+
+}
+
+//Test that 2nd wave has higher health
+    [Test()]
+    public void TestAutoWaveBecomesHarder()
+    {
+        for (int i = 0:i<5001;i++)
+        {
+            map.Update();//Callls 5000 updates, creates wave
+
+}
+
+Enemy t = map.currentWave.pop();
+
+for (int i = 0:i< 5001 ;i++)
+        {
+            map.Update();//Callls 5000  moreupdates, creates wave
+
+}
+
+Assert.isTrue(map.currentWave.pop.Health>t.Health);
+
+}
+
+//Test that 3rd health is the same as 2nd, more baddies
+    [Test()]
+    public void TestAutoWaveBecomesHarderAndBigger()
+    {
+        for (int i = 0:i<10001;i++)
+        {
+            map.Update();//Callls 10000 updates, creates 2 waves, first one dies off
+
+}
+
+int Count =  map.currentWave.count();
+
+Enemy t = map.currentWave.pop()
+
+for (int i = 0:i<5001;i++)
+        {
+            map.Update();//Callls 5000  moreupdates, creates wave
+
+}
+
+Assert.AreEqual(Count, map.currentWave.count());
+
+Assert.isTrue(map.currentWave.pop.Health==t.Health);
+
+}

@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NUnit.Framework;
+using SQA_Tower_Defense;
+using Microsoft.Xna.Framework;
+
+namespace ClassTests
+{
+   [TestFixture()]
+   public class InternationalizationTests
+   {
+
+    //Checks the internationalization translation for the tower’s info for english
+       [Test()]
+       public void TowerInfoEnglish ()
+       {
+           Tower tower = new Tower("", 1, 1, 1, 1, new Rectangle(1, 1, 1,1));
+           tower.lang = "En";
+           Assert.AreEqual(tower.getInfo(), "Name: Test \n Range: 1 \n Cost: 1 \n Damage: 1 \n");
+       }
+
+
+//Checks the internationalization translation for the enemy’s info for english
+       [Test()]
+       public void EnemyInfoEnglish()
+       {
+           Enemy enemy = new Enemy(1, 1, "basic", 1, new Rectangle(1, 1,1, 1));
+           enemy.land = "En";
+           Assert.AreEqual(enemy.getInfo(), "Name: Test \n Speed: 1 \n Reward: 1”);
+       }
+//Checks the internationalization translation for the Map’s info for english
+       [Test()]
+       public void MapInfoEnglish()
+       {
+           Map map = new Map("normal",1,1);
+           map.lang = "En";
+           Assert.AreEqual(map.getInfo(), "Gold: 1 \n Score: 0 \n");
+
+       }
+
+//Checks the internationalization translation for the castle’s info for english
+       [Test()]
+       public void CastleInfoEnglish()
+       {
+           Castle castle = new Castle(1, new Rectangle());
+           castle.lang = "En";
+           Assert.AreEqual(castle.getInfo, "Health: 1");
+       }
+//Checks the internationalization translation for the tower’s info for spanish
+            [Test()]
+       public void TowerInfoSpanish ()
+       {
+           Tower tower = new Tower("", 1, 1, 1, 1, new Rectangle(1, 1, 1,1));
+           tower.lang = "Sp";
+           Assert.AreEqual(tower.getInfo(), "Nombre: Test \n Gama: 1 \n Costo: 1 \n Dano: 1 \n");
+       }
+//Checks the internationalization translation for the enemy’s info for spanish
+       [Test()]
+       public void EnemyInfoSpanish()
+       {
+           Enemy enemy = new Enemy(1, 1, "basic", 1, new Rectangle(1, 1,1, 1));
+           enemy.land = "En";
+           Assert.AreEqual(enemy.getInfo(), "Nombre: Test \n Velocidad: 1 \n Recompensa: 1 \n");
+       }
+//Checks the internationalization translation for the map’s info for spanish
+       [Test()]
+       public void MapInfoSpanish()
+       {
+           Map map = new Map("normal",1,1);
+           map.lang = "En";
+           Assert.AreEqual(map.getInfo(), "Oro: 1 \n puntos: 0 \n");
+
+       }
+
+//Checks the internationalization translation for the castle’s info for spanish
+       [Test()]
+       public void CastleInfoSpanish()
+       {
+           Castle castle = new Castle(1, new Rectangle());
+           castle.lang = "En";
+           Assert.AreEqual(castle.getInfo, "Salud: 1");
+       }
+   }
+}
