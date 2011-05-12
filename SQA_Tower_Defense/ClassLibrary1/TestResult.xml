@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" total="111" errors="8" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-05-12" time="00:52:56">
+<test-results name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" total="111" errors="10" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-05-12" time="01:20:20">
   <environment nunit-version="2.5.9.10348" clr-version="2.0.50727.3620" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1" machine-name="MELLINJA-1" user="mellinja" user-domain="MELLINJA-1" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Project" name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" executed="True" result="Failure" success="False" time="13.828" asserts="0">
+  <test-suite type="Project" name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" executed="True" result="Failure" success="False" time="47.517" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" executed="True" result="Failure" success="False" time="13.734" asserts="0">
+      <test-suite type="Assembly" name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" executed="True" result="Failure" success="False" time="47.423" asserts="0">
         <results>
-          <test-suite type="Namespace" name="ClassTests" executed="True" result="Failure" success="False" time="13.734" asserts="0">
+          <test-suite type="Namespace" name="ClassTests" executed="True" result="Failure" success="False" time="47.423" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="CastleTests" executed="True" result="Success" success="True" time="0.141" asserts="0">
+              <test-suite type="TestFixture" name="CastleTests" executed="True" result="Success" success="True" time="0.156" asserts="0">
                 <results>
-                  <test-case name="ClassTests.CastleTests.castleCanBeDestroyed" executed="True" result="Success" success="True" time="0.125" asserts="2" />
-                  <test-case name="ClassTests.CastleTests.castleCanBeDestroyedStopsAll" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="ClassTests.CastleTests.castleCanBeDestroyed" executed="True" result="Success" success="True" time="0.141" asserts="2" />
+                  <test-case name="ClassTests.CastleTests.castleCanBeDestroyedStopsAll" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="ClassTests.CastleTests.CastleInitTest" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.CastleTests.CastleInitTestBadLocation" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.CastleTests.CastleInitTestHealth0" executed="True" result="Success" success="True" time="0.000" asserts="0" />
@@ -29,12 +29,12 @@
                 <results>
                   <test-case name="ClassTests.EnemyMovementTests.mapSpawnsEnemys" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.EnemyMovementTests.mapUpdatesAddsEnemiesToTowerLists" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                  <test-case name="ClassTests.EnemyMovementTests.mapUpdatesDamageEnemiesWithTowers" executed="True" result="Success" success="True" time="0.016" asserts="2" />
+                  <test-case name="ClassTests.EnemyMovementTests.mapUpdatesDamageEnemiesWithTowers" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.EnemyMovementTests.mapUpdatesMoveAllEnemy" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.EnemyMovementTests.mapUpdatesMoveSingleEnemy" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="EnemyMovementTestsWithCastle" executed="True" result="Success" success="True" time="0.016" asserts="0">
+              <test-suite type="TestFixture" name="EnemyMovementTestsWithCastle" executed="True" result="Success" success="True" time="0.000" asserts="0">
                 <results>
                   <test-case name="ClassTests.EnemyMovementTestsWithCastle.TestEnemiesMoveToCastleDownWhenPathBlocked" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.EnemyMovementTestsWithCastle.TestEnemiesMoveToCastleLeftRight" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -65,9 +65,9 @@
                   <test-case name="ClassTests.EnemyTests.testEnemyThrowsExceptioOnZeroSpeed" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="MainGameTests" executed="True" result="Failure" success="False" time="13.281" asserts="0">
+              <test-suite type="TestFixture" name="MainGameTests" executed="True" result="Failure" success="False" time="43.439" asserts="0">
                 <results>
-                  <test-case name="ClassTests.MainGameTests.ClickingEmptySpaceWhenSelectingTowerPlacesTower" executed="True" result="Error" success="False" time="1.562" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.ClickingEmptySpaceWhenSelectingTowerPlacesTower" executed="True" result="Error" success="False" time="1.453" asserts="0">
                     <failure>
                       <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
   ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
@@ -79,25 +79,14 @@ at Microsoft.Xna.Framework.Game.Initialize()
 at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
 at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
 at Microsoft.Xna.Framework.Game.Run()
-at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 21
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
 --FileNotFoundException
 at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
 at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.ClickingNewTowerSelectsCorrectTower" executed="True" result="Error" success="False" time="6.687" asserts="0">
-                    <failure>
-                      <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
-Parameter name: graphicsDevice]]></message>
-                      <stack-trace><![CDATA[at Microsoft.Xna.Framework.Graphics.SpriteBatch..ctor(GraphicsDevice graphicsDevice)
-at SQA_Tower_Defense.MainGame.LoadContent() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 80
-at SQA_Tower_Defense.MainGame.LoadContent(Int32 i) in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 66
-at ClassTests.MainGameTests.ClickingNewTowerSelectsCorrectTower() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 115
-]]></stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case name="ClassTests.MainGameTests.ClickingNewTowerSelectsNewTower" executed="True" result="Error" success="False" time="0.266" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.ClickingNewTowerSelectsCorrectTower" executed="True" result="Error" success="False" time="1.641" asserts="0">
                     <failure>
                       <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
   ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
@@ -109,15 +98,14 @@ at Microsoft.Xna.Framework.Game.Initialize()
 at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
 at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
 at Microsoft.Xna.Framework.Game.Run()
-at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 21
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
 --FileNotFoundException
 at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
 at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.GameInitializesSuccessfully" executed="True" result="Success" success="True" time="1.094" asserts="1" />
-                  <test-case name="ClassTests.MainGameTests.LoadContentInitializesEverythingSuccessfully" executed="True" result="Error" success="False" time="0.281" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.ClickingNewTowerSelectsNewTower" executed="True" result="Error" success="False" time="1.891" asserts="0">
                     <failure>
                       <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
   ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
@@ -129,25 +117,14 @@ at Microsoft.Xna.Framework.Game.Initialize()
 at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
 at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
 at Microsoft.Xna.Framework.Game.Run()
-at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 21
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
 --FileNotFoundException
 at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
 at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.LoadContentInitializesSpriteBatchSuccessfully" executed="True" result="Error" success="False" time="0.625" asserts="0">
-                    <failure>
-                      <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
-Parameter name: graphicsDevice]]></message>
-                      <stack-trace><![CDATA[at Microsoft.Xna.Framework.Graphics.SpriteBatch..ctor(GraphicsDevice graphicsDevice)
-at SQA_Tower_Defense.MainGame.LoadContent() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 80
-at SQA_Tower_Defense.MainGame.LoadContent(Int32 i) in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 66
-at ClassTests.MainGameTests.LoadContentInitializesSpriteBatchSuccessfully() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 42
-]]></stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case name="ClassTests.MainGameTests.LoadContentLoadsFontSuccessfully" executed="True" result="Error" success="False" time="0.297" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.GameInitializesSuccessfully" executed="True" result="Error" success="False" time="1.656" asserts="0">
                     <failure>
                       <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
   ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
@@ -159,23 +136,14 @@ at Microsoft.Xna.Framework.Game.Initialize()
 at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
 at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
 at Microsoft.Xna.Framework.Game.Run()
-at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 21
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
 --FileNotFoundException
 at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
 at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.LoadContentLoadsMouseStatusSuccessfully" executed="True" result="Failure" success="False" time="0.672" asserts="1">
-                    <failure>
-                      <message><![CDATA[  Expected: True
-  But was:  False
-]]></message>
-                      <stack-trace><![CDATA[at ClassTests.MainGameTests.LoadContentLoadsMouseStatusSuccessfully() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 36
-]]></stack-trace>
-                    </failure>
-                  </test-case>
-                  <test-case name="ClassTests.MainGameTests.Pressing1SelectsCorrectTower" executed="True" result="Error" success="False" time="0.250" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.LoadContentInitializesEverythingSuccessfully" executed="True" result="Error" success="False" time="1.391" asserts="0">
                     <failure>
                       <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
   ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
@@ -187,27 +155,111 @@ at Microsoft.Xna.Framework.Game.Initialize()
 at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
 at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
 at Microsoft.Xna.Framework.Game.Run()
-at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 21
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
 --FileNotFoundException
 at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
 at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.Pressing1SelectsNewTower" executed="True" result="Error" success="False" time="0.656" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.LoadContentInitializesSpriteBatchSuccessfully" executed="True" result="Error" success="False" time="2.281" asserts="0">
                     <failure>
-                      <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
-Parameter name: graphicsDevice]]></message>
-                      <stack-trace><![CDATA[at Microsoft.Xna.Framework.Graphics.SpriteBatch..ctor(GraphicsDevice graphicsDevice)
-at SQA_Tower_Defense.MainGame.LoadContent() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 80
-at SQA_Tower_Defense.MainGame.LoadContent(Int32 i) in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 66
-at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 79
+                      <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
+  ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
+                      <stack-trace><![CDATA[at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+at Microsoft.Xna.Framework.Content.ContentManager.ReadAsset[T](String assetName, Action`1 recordDisposableObject)
+at Microsoft.Xna.Framework.Content.ContentManager.Load[T](String assetName)
+at SQA_Tower_Defense.MainGame.LoadContent() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 81
+at Microsoft.Xna.Framework.Game.Initialize()
+at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
+at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
+at Microsoft.Xna.Framework.Game.Run()
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
+--FileNotFoundException
+at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
+at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ClassTests.MainGameTests.LoadContentLoadsFontSuccessfully" executed="True" result="Error" success="False" time="1.484" asserts="0">
+                    <failure>
+                      <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
+  ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
+                      <stack-trace><![CDATA[at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+at Microsoft.Xna.Framework.Content.ContentManager.ReadAsset[T](String assetName, Action`1 recordDisposableObject)
+at Microsoft.Xna.Framework.Content.ContentManager.Load[T](String assetName)
+at SQA_Tower_Defense.MainGame.LoadContent() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 81
+at Microsoft.Xna.Framework.Game.Initialize()
+at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
+at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
+at Microsoft.Xna.Framework.Game.Run()
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
+--FileNotFoundException
+at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
+at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ClassTests.MainGameTests.LoadContentLoadsMouseStatusSuccessfully" executed="True" result="Error" success="False" time="1.297" asserts="0">
+                    <failure>
+                      <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
+  ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
+                      <stack-trace><![CDATA[at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+at Microsoft.Xna.Framework.Content.ContentManager.ReadAsset[T](String assetName, Action`1 recordDisposableObject)
+at Microsoft.Xna.Framework.Content.ContentManager.Load[T](String assetName)
+at SQA_Tower_Defense.MainGame.LoadContent() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 81
+at Microsoft.Xna.Framework.Game.Initialize()
+at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
+at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
+at Microsoft.Xna.Framework.Game.Run()
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
+--FileNotFoundException
+at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
+at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ClassTests.MainGameTests.Pressing1SelectsCorrectTower" executed="True" result="Error" success="False" time="1.484" asserts="0">
+                    <failure>
+                      <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
+  ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
+                      <stack-trace><![CDATA[at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+at Microsoft.Xna.Framework.Content.ContentManager.ReadAsset[T](String assetName, Action`1 recordDisposableObject)
+at Microsoft.Xna.Framework.Content.ContentManager.Load[T](String assetName)
+at SQA_Tower_Defense.MainGame.LoadContent() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 81
+at Microsoft.Xna.Framework.Game.Initialize()
+at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
+at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
+at Microsoft.Xna.Framework.Game.Run()
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
+--FileNotFoundException
+at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
+at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="ClassTests.MainGameTests.Pressing1SelectsNewTower" executed="True" result="Error" success="False" time="0.891" asserts="0">
+                    <failure>
+                      <message><![CDATA[SetUp : Microsoft.Xna.Framework.Content.ContentLoadException : Error loading "font". File not found.
+  ----> System.IO.FileNotFoundException : Error loading "Content\font.xnb". File not found.]]></message>
+                      <stack-trace><![CDATA[at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
+at Microsoft.Xna.Framework.Content.ContentManager.ReadAsset[T](String assetName, Action`1 recordDisposableObject)
+at Microsoft.Xna.Framework.Content.ContentManager.Load[T](String assetName)
+at SQA_Tower_Defense.MainGame.LoadContent() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 81
+at Microsoft.Xna.Framework.Game.Initialize()
+at SQA_Tower_Defense.MainGame.Initialize() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\SQA_Tower_Defense\SQA_Tower_Defense\MainGame.cs:line 60
+at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)
+at Microsoft.Xna.Framework.Game.Run()
+at ClassTests.MainGameTests.SetUp() in C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\MainGameTests.cs:line 23
+--FileNotFoundException
+at Microsoft.Xna.Framework.TitleContainer.OpenStream(String name)
+at Microsoft.Xna.Framework.Content.ContentManager.OpenStream(String assetName)
 ]]></stack-trace>
                     </failure>
                   </test-case>
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="MapTests" executed="True" result="Success" success="True" time="0.156" asserts="0">
+              <test-suite type="TestFixture" name="MapTests" executed="True" result="Success" success="True" time="0.484" asserts="0">
                 <results>
                   <test-case name="ClassTests.MapTests.EnemiesGetAddedToListWhenSpawned" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.MapTests.EnemiesGetRemovedFromListWhenKilled" executed="True" result="Success" success="True" time="0.000" asserts="0" />
@@ -215,11 +267,11 @@ at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Setti
                   <test-case name="ClassTests.MapTests.InsufficientFundsRejectTowerPlacement" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.LoadedStateHasCorrectLastEnemy" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="ClassTests.MapTests.LoadedStateHasCorrectMoneyAmount" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="ClassTests.MapTests.LoadedStateHasCorrectTowerCount" executed="True" result="Success" success="True" time="0.016" asserts="1" />
-                  <test-case name="ClassTests.MapTests.LoadedStatesDoChangeStateOfMap" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="ClassTests.MapTests.LoadedStateHasCorrectTowerCount" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="ClassTests.MapTests.LoadedStatesDoChangeStateOfMap" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="ClassTests.MapTests.LoadedStatesDoNotLoadIfThereIsNoPreviousStates" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.MapInitializes" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="ClassTests.MapTests.MoneyDecreasesWhenTowerIsPlaced" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                  <test-case name="ClassTests.MapTests.MoneyDecreasesWhenTowerIsPlaced" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.MoneyIncreasesWhenEnemyIsKilled" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.MoneyIncreasesWhenTowerIsSold" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.SavedStateLastStateHasCorrectEnemy" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -234,14 +286,14 @@ at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Setti
                   <test-case name="ClassTests.MapTests.test0Difficulty" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.MapTests.testMapInvalidGameType" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.MapTests.testMapNegativeMoney" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                  <test-case name="ClassTests.MapTests.testNegativeDifficulty" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+                  <test-case name="ClassTests.MapTests.testNegativeDifficulty" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.MapTests.testTooHighDifficulty" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.MapTests.TowersCannotBePlacedOnTopOfAnotherTower" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.TowersGetAddedToListWhenPlaced" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.TowersGetRemovedFromListWhenSold" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="TowerTestInteractionWithEnemiesWithsetup" executed="True" result="Success" success="True" time="0.016" asserts="0">
+              <test-suite type="TestFixture" name="TowerTestInteractionWithEnemiesWithsetup" executed="True" result="Success" success="True" time="0.156" asserts="0">
                 <results>
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.attackEvery60" executed="True" result="Success" success="True" time="0.000" asserts="61" />
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyDestroyed" executed="True" result="Success" success="True" time="0.000" asserts="2" />
@@ -254,7 +306,7 @@ at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Setti
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.TowerStopsAttackingEnemyOnceItMovesOutsideOfRange" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="TowerTests" executed="True" result="Success" success="True" time="0.031" asserts="0">
+              <test-suite type="TestFixture" name="TowerTests" executed="True" result="Success" success="True" time="0.047" asserts="0">
                 <results>
                   <test-case name="ClassTests.TowerTests.testInit" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.TowerTests.testTowerThrowsExceptioOnNegativeCost" executed="True" result="Success" success="True" time="0.000" asserts="0" />
@@ -269,26 +321,26 @@ at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Setti
                   <test-case name="ClassTests.TowerTests.TowerAddsEnemySuccessfully" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.TowerTests.towerHasCorrectAttackDamageWhenInitialized" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.TowerTests.towerHasCorrectCostWhenInitialized" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="ClassTests.TowerTests.towerHasCorrectHealthAfterModified" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="ClassTests.TowerTests.towerHasCorrectHealthAfterModified" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="ClassTests.TowerTests.towerHasCorrectHealthWhenInitialized" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.TowerTests.towerHasCorrectRangeWhenInitialized" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="TowerTestsInteractionWithEnemies" executed="True" result="Success" success="True" time="0.000" asserts="0">
+              <test-suite type="TestFixture" name="TowerTestsInteractionWithEnemies" executed="True" result="Success" success="True" time="0.016" asserts="0">
                 <results>
                   <test-case name="ClassTests.TowerTestsInteractionWithEnemies.testTowerChangesTarget" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.TowerTestsInteractionWithEnemies.testTowerUpdatesEnemiesList" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.TowerTestsInteractionWithEnemies.testTwoTowerswithTwoEnemies" executed="True" result="Success" success="True" time="0.000" asserts="4" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="WaveTest" executed="True" result="Success" success="True" time="0.016" asserts="0">
+              <test-suite type="TestFixture" name="WaveTest" executed="True" result="Success" success="True" time="0.031" asserts="0">
                 <results>
                   <test-case name="ClassTests.WaveTest.WaveInitializes" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="ClassTests.WaveTest.WaveReturnsAnEnemy" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                  <test-case name="ClassTests.WaveTest.WaveReturnsAnEnemy" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.WaveTest.WaveReturnsMultipleEnemy" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.WaveTest.WaveReturnsUniqueEnemies" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.WaveTest.WaveThrowsOn0Count" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                  <test-case name="ClassTests.WaveTest.WaveThrowsOnNegativeCount" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="ClassTests.WaveTest.WaveThrowsOnNegativeCount" executed="True" result="Success" success="True" time="0.016" asserts="0" />
                   <test-case name="ClassTests.WaveTest.WaveThrowsOnNullEnemy" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                 </results>
               </test-suite>

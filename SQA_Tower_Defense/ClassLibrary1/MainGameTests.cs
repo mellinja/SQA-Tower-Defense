@@ -6,10 +6,11 @@ using NUnit.Framework;
 using SQA_Tower_Defense;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ClassTests
 {
-    
+
     [TestFixture()]
     public class MainGameTests
     {
@@ -17,21 +18,23 @@ namespace ClassTests
         [SetUp()]
         public void SetUp()
         {
-            towerGame = new MainGame();
-            towerGame.Run();
+            using (towerGame = new MainGame())
+            {
+                towerGame.Run();
+            }
         }
 
 
         [Test()]
         public void GameInitializesSuccessfully()
         {
+
             Assert.IsNotNull(towerGame);
         }
 
         [Test()]
         public void LoadContentLoadsMouseStatusSuccessfully()
         {
-            // towerGame.LoadContent(1);
 
             Assert.AreEqual(true, towerGame.isMouseVisible);
         }
@@ -39,7 +42,6 @@ namespace ClassTests
         [Test()]
         public void LoadContentInitializesSpriteBatchSuccessfully()
         {
-            towerGame.LoadContent(1);
 
             Assert.IsNotNull(towerGame.spriteBatch);
         }
@@ -47,7 +49,7 @@ namespace ClassTests
         [Test()]
         public void LoadContentLoadsFontSuccessfully()
         {
-            towerGame.LoadContent(1);
+
             Assert.IsNotNull(towerGame.font);
 
         }
@@ -75,27 +77,27 @@ namespace ClassTests
 
         [Test()]
         public void Pressing1SelectsNewTower()
-{
-	towerGame.LoadContent(1);
-	Assert.IsNull(towerGame.placingTower);
-	towerGame.boardState = new KeyboardState();	
-	towerGame.UpdateInput();
-	Assert.IsNotNull(towerGame.placingTower);
-}
+        {
+            towerGame.LoadContent(1);
+            Assert.IsNull(towerGame.placingTower);
+            towerGame.boardState = new KeyboardState();
+            towerGame.UpdateInput();
+            Assert.IsNotNull(towerGame.placingTower);
+        }
 
         [Test()]
         public void Pressing1SelectsCorrectTower()
-{
+        {
 
-	towerGame.LoadContent(1);
-Assert.IsNull(towerGame.placingTower);
-	Tower temp = towerGame.menu.Towers[0];
-	towerGame.boardState = new KeyboardState();
-	towerGame.UpdateInput();
-	Assert.AreEqual(towerGame.placingTower, temp);
-	
+            towerGame.LoadContent(1);
+            Assert.IsNull(towerGame.placingTower);
+            Tower temp = towerGame.menu.Towers[0];
+            towerGame.boardState = new KeyboardState();
+            towerGame.UpdateInput();
+            Assert.AreEqual(towerGame.placingTower, temp);
 
-}
+
+        }
 
         [Test()]
         public void ClickingNewTowerSelectsNewTower()
@@ -141,5 +143,5 @@ Assert.IsNull(towerGame.placingTower);
         }
 
     }
-     
+
 }
