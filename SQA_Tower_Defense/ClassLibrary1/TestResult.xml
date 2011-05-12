@@ -1,28 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" total="98" errors="9" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-05-11" time="15:18:40">
+<test-results name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" total="103" errors="9" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2011-05-11" time="15:23:44">
   <environment nunit-version="2.5.9.10348" clr-version="2.0.50727.3620" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1" machine-name="MELLINJA-1" user="mellinja" user-domain="MELLINJA-1" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Project" name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" executed="True" result="Failure" success="False" time="1.172" asserts="0">
+  <test-suite type="Project" name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" executed="True" result="Failure" success="False" time="0.922" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" executed="True" result="Failure" success="False" time="1.156" asserts="0">
+      <test-suite type="Assembly" name="C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" executed="True" result="Failure" success="False" time="0.891" asserts="0">
         <results>
-          <test-suite type="Namespace" name="ClassTests" executed="True" result="Failure" success="False" time="1.156" asserts="0">
+          <test-suite type="Namespace" name="ClassTests" executed="True" result="Failure" success="False" time="0.891" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="CastleTests" executed="True" result="Success" success="True" time="0.219" asserts="0">
+              <test-suite type="TestFixture" name="CastleTests" executed="True" result="Success" success="True" time="0.156" asserts="0">
                 <results>
-                  <test-case name="ClassTests.CastleTests.castleCanBeDestroyed" executed="True" result="Success" success="True" time="0.109" asserts="2" />
-                  <test-case name="ClassTests.CastleTests.castleCanBeDestroyedStopsAll" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="ClassTests.CastleTests.castleCanBeDestroyed" executed="True" result="Success" success="True" time="0.141" asserts="2" />
+                  <test-case name="ClassTests.CastleTests.castleCanBeDestroyedStopsAll" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="ClassTests.CastleTests.CastleInitTest" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.CastleTests.CastleInitTestBadLocation" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.CastleTests.CastleInitTestHealth0" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.CastleTests.CastleInitTestHealthNegative" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="CellTests" executed="True" result="Success" success="True" time="0.000" asserts="0">
+              <test-suite type="TestFixture" name="CellTests" executed="True" result="Success" success="True" time="0.016" asserts="0">
                 <results>
                   <test-case name="ClassTests.CellTests.CellHasOccupied" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.CellTests.CellInitializes" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="EnemyMovementTests" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                <results>
+                  <test-case name="ClassTests.EnemyMovementTests.mapSpawnsEnemys" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="ClassTests.EnemyMovementTests.mapUpdatesAddsEnemiesToTowerLists" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="ClassTests.EnemyMovementTests.mapUpdatesDamageEnemiesWithTowers" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="ClassTests.EnemyMovementTests.mapUpdatesMoveAllEnemy" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                  <test-case name="ClassTests.EnemyMovementTests.mapUpdatesMoveSingleEnemy" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                 </results>
               </test-suite>
               <test-suite type="TestFixture" name="EnemyMovementTestsWithCastle" executed="False" result="Ignored">
@@ -35,7 +44,7 @@
                   <test-case name="ClassTests.EnemyTests.EnemyHasCorrectGoldAfterInitialized" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.EnemyTests.EnemyHasCorrectHealthAfterDamaged" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.EnemyTests.EnemyHasCorrectHealthAfterInitialized" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="ClassTests.EnemyTests.EnemyHasCorrectSpeedAfterInitialized" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+                  <test-case name="ClassTests.EnemyTests.EnemyHasCorrectSpeedAfterInitialized" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.EnemyTests.EnemyHasCorrectSpeedAfterModified" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.EnemyTests.EnemyHasCorrectTypeAfterModified" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.EnemyTests.EnemyInitializesSuccessfully" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -49,9 +58,9 @@
                   <test-case name="ClassTests.EnemyTests.testEnemyThrowsExceptioOnZeroSpeed" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="MainGameTests" executed="True" result="Failure" success="False" time="0.781" asserts="0">
+              <test-suite type="TestFixture" name="MainGameTests" executed="True" result="Failure" success="False" time="0.562" asserts="0">
                 <results>
-                  <test-case name="ClassTests.MainGameTests.ClickingEmptySpaceWhenSelectingTowerPlacesTower" executed="True" result="Error" success="False" time="0.391" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.ClickingEmptySpaceWhenSelectingTowerPlacesTower" executed="True" result="Error" success="False" time="0.328" asserts="0">
                     <failure>
                       <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
 Parameter name: graphicsDevice]]></message>
@@ -62,7 +71,7 @@ at ClassTests.MainGameTests.ClickingEmptySpaceWhenSelectingTowerPlacesTower() in
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.ClickingNewTowerSelectsCorrectTower" executed="True" result="Error" success="False" time="0.078" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.ClickingNewTowerSelectsCorrectTower" executed="True" result="Error" success="False" time="0.016" asserts="0">
                     <failure>
                       <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
 Parameter name: graphicsDevice]]></message>
@@ -85,7 +94,7 @@ at ClassTests.MainGameTests.ClickingNewTowerSelectsNewTower() in C:\Documents an
                     </failure>
                   </test-case>
                   <test-case name="ClassTests.MainGameTests.GameInitializesSuccessfully" executed="True" result="Success" success="True" time="0.016" asserts="1" />
-                  <test-case name="ClassTests.MainGameTests.LoadContentInitializesEverythingSuccessfully" executed="True" result="Error" success="False" time="0.016" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.LoadContentInitializesEverythingSuccessfully" executed="True" result="Error" success="False" time="0.031" asserts="0">
                     <failure>
                       <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
 Parameter name: graphicsDevice]]></message>
@@ -107,7 +116,7 @@ at ClassTests.MainGameTests.LoadContentInitializesSpriteBatchSuccessfully() in C
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.LoadContentLoadsFontSuccessfully" executed="True" result="Error" success="False" time="0.078" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.LoadContentLoadsFontSuccessfully" executed="True" result="Error" success="False" time="0.016" asserts="0">
                     <failure>
                       <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
 Parameter name: graphicsDevice]]></message>
@@ -118,7 +127,7 @@ at ClassTests.MainGameTests.LoadContentLoadsFontSuccessfully() in C:\Documents a
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.LoadContentLoadsMouseStatusSuccessfully" executed="True" result="Error" success="False" time="0.062" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.LoadContentLoadsMouseStatusSuccessfully" executed="True" result="Error" success="False" time="0.016" asserts="0">
                     <failure>
                       <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
 Parameter name: graphicsDevice]]></message>
@@ -129,7 +138,7 @@ at ClassTests.MainGameTests.LoadContentLoadsMouseStatusSuccessfully() in C:\Docu
 ]]></stack-trace>
                     </failure>
                   </test-case>
-                  <test-case name="ClassTests.MainGameTests.Pressing1SelectsCorrectTower" executed="True" result="Error" success="False" time="0.047" asserts="0">
+                  <test-case name="ClassTests.MainGameTests.Pressing1SelectsCorrectTower" executed="True" result="Error" success="False" time="0.031" asserts="0">
                     <failure>
                       <message><![CDATA[System.ArgumentNullException : The GraphicsDevice must not be null when creating new resources.
 Parameter name: graphicsDevice]]></message>
@@ -153,10 +162,10 @@ at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Setti
                   </test-case>
                 </results>
               </test-suite>
-              <test-suite type="TestFixture" name="MapTests" executed="True" result="Success" success="True" time="0.062" asserts="0">
+              <test-suite type="TestFixture" name="MapTests" executed="True" result="Success" success="True" time="0.047" asserts="0">
                 <results>
                   <test-case name="ClassTests.MapTests.EnemiesGetAddedToListWhenSpawned" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                  <test-case name="ClassTests.MapTests.EnemiesGetRemovedFromListWhenKilled" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+                  <test-case name="ClassTests.MapTests.EnemiesGetRemovedFromListWhenKilled" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.MapTests.EnemiesNotInListThatGetKilledCrashGame" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.MapTests.InsufficientFundsRejectTowerPlacement" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.LoadedStateHasCorrectLastEnemy" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -168,7 +177,7 @@ at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Setti
                   <test-case name="ClassTests.MapTests.MoneyDecreasesWhenTowerIsPlaced" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.MoneyIncreasesWhenEnemyIsKilled" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.MoneyIncreasesWhenTowerIsSold" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="ClassTests.MapTests.SavedStateLastStateHasCorrectEnemy" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                  <test-case name="ClassTests.MapTests.SavedStateLastStateHasCorrectEnemy" executed="True" result="Success" success="True" time="0.016" asserts="1" />
                   <test-case name="ClassTests.MapTests.SavedStateLastStateHasCorrectEnemyCount" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.SaveStateListIsNotNullWhenMapInitializes" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.MapTests.SaveStateNextStateAddsNewStateToList" executed="True" result="Success" success="True" time="0.000" asserts="1" />
@@ -192,8 +201,8 @@ at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Setti
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.attackEvery60" executed="True" result="Success" success="True" time="0.000" asserts="61" />
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyDestroyed" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyMoveOutofRange" executed="True" result="Success" success="True" time="0.000" asserts="2" />
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyThatDiesWithinRangeOfTwoTowersGetsRemovedFromBothTowerLists" executed="True" result="Success" success="True" time="0.000" asserts="4" />
-                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.MoveBothEnemyOutofRange" executed="True" result="Success" success="True" time="0.016" asserts="5" />
+                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.EnemyThatDiesWithinRangeOfTwoTowersGetsRemovedFromBothTowerLists" executed="True" result="Success" success="True" time="0.016" asserts="4" />
+                  <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.MoveBothEnemyOutofRange" executed="True" result="Success" success="True" time="0.000" asserts="5" />
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.MultipleTowersCanAttackSingleEnemy" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.TowerAttacksAnEnemyInItsRange" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.TowerTestInteractionWithEnemiesWithsetup.TowerDoesNotAttackEnemyOutsideItsRange" executed="True" result="Success" success="True" time="0.000" asserts="2" />
@@ -233,7 +242,7 @@ at ClassTests.MainGameTests.Pressing1SelectsNewTower() in C:\Documents and Setti
                   <test-case name="ClassTests.WaveTest.WaveReturnsAnEnemy" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                   <test-case name="ClassTests.WaveTest.WaveReturnsMultipleEnemy" executed="True" result="Success" success="True" time="0.000" asserts="2" />
                   <test-case name="ClassTests.WaveTest.WaveReturnsUniqueEnemies" executed="True" result="Success" success="True" time="0.000" asserts="1" />
-                  <test-case name="ClassTests.WaveTest.WaveThrowsOn0Count" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="ClassTests.WaveTest.WaveThrowsOn0Count" executed="True" result="Success" success="True" time="0.016" asserts="0" />
                   <test-case name="ClassTests.WaveTest.WaveThrowsOnNegativeCount" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                   <test-case name="ClassTests.WaveTest.WaveThrowsOnNullEnemy" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                 </results>

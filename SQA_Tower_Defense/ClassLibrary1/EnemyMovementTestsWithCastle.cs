@@ -108,8 +108,8 @@ namespace ClassTests
             map.SpawnEnemy(new Enemy(1, 1, "basic", 1, new Rectangle(1, 99, 1, 1)));
             map.Update();
             Assert.AreEqual(map.enemiesOnMap[0].Location, new Rectangle(1, 99, 1, 1));
-        }
-        */
+        }*/
+        
 
 
     }

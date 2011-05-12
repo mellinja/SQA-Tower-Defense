@@ -10,7 +10,7 @@ namespace ClassTests
     class EnemyMovementTests
     {
 
-        /*
+        
         Map map;
         Rectangle rec;
         Tower tower;
@@ -112,8 +112,8 @@ public void mapUpdatesMoveAllEnemy()
                 Assert.AreEqual(special, t.getCurrentTarget());//Special should be the closest to the tower
 				Assert.AreEqual(10, t.getCurrentTarget().Health);
         }
-         * 
-         */
+         
+         
 
 
 
