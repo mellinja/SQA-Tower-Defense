@@ -30,7 +30,7 @@ namespace SQA_Tower_Defense
 
             this.TowerTypes = new List<Tower>();
             Rectangle tower = new Rectangle(background.X + 20, background.Y + 5, 50, 50);
-            TowerTypes.Add(new Tower("Basic", 10, 10, 10, 100, tower));
+            TowerTypes.Add(new Tower("Basic", 10, 50, 10, 100, tower));
             TowerTypes.Add(new Tower("Basic", 10, 15, 15, 100, new Rectangle(tower.X + 100, tower.Y, tower.Width, tower.Height)));
 
             this.spriteBatch = spriteBatch;

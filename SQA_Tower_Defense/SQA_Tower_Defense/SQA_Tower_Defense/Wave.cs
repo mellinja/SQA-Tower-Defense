@@ -29,6 +29,12 @@ namespace SQA_Tower_Defense
 
         }
 
+        public Stack<Enemy> Enemies
+        {
+            get { return this.waveEnemies; }
+        }
+        
+
 
         //Returns the top enemy on the stack, unless stack is empty (4 lines)
         public Enemy getEnemy()

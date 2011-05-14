@@ -37,7 +37,9 @@ namespace SQA_Tower_Defense
         public MainGame()
         {
             graphics = new GraphicsDeviceManager(this);
-           // graphics.IsFullScreen = true;
+            graphics.PreferredBackBufferHeight = 1200;
+            graphics.PreferredBackBufferWidth = 1920;
+            //graphics.IsFullScreen = true;
             Content.RootDirectory = "Content";
         }
 
@@ -55,7 +57,7 @@ namespace SQA_Tower_Defense
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            
+
             base.Initialize();
 
         }
@@ -82,10 +84,14 @@ namespace SQA_Tower_Defense
             gameTimer = 0;
             placingTower = null;
             map = new Map("normal", 100, 1);
+            
             towerTex = Content.Load<Texture2D>("Sprites\\Eiffel");
             backTex = Content.Load<Texture2D>("Sprites\\Blank");
-            map.Enemies.Add(new Enemy(100, 10f, "basic", 10, new Rectangle(50, 50, 50, 50)));
-
+            Enemy e = new Enemy(100, 10f, "basic", 10, new Rectangle(50, 50, 50, 50));
+            e.Map = map;
+            map.setStandardEnemy(e.Clone());
+            map.Enemies.Add(e);
+            map.PlaceCastle(new Castle(1000000000, new Rectangle(200, 200, 40, 40)));
             this.menu = new Interface(this.graphics, this.spriteBatch, this.font);
             this.menu.Background = backTex;
             this.menu.TowerTex = towerTex;
@@ -141,6 +147,9 @@ namespace SQA_Tower_Defense
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
+
+
+            spriteBatch.DrawString(font, "" + gameTimer, new Vector2(0, 0), Color.White);
 
             #region Draw Towers and Enemies
 
@@ -258,7 +267,7 @@ namespace SQA_Tower_Defense
             }
 
             #region Selecting towers with Keyboard Input
-            
+
             if (boardState.IsKeyDown(Keys.D1) && previousKeyboardState.IsKeyUp(Keys.D1))
             {
                 Tower temp = menu.Towers[0];
@@ -310,3 +319,4 @@ namespace SQA_Tower_Defense
 
     }
 }
+

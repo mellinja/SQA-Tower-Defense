@@ -33,7 +33,7 @@ namespace SQA_Tower_Defense
             	throw new ArgumentOutOfRangeException();
         	if (speed <= 0)
             	throw new ArgumentOutOfRangeException();
-        	if (health <= 0)
+        	if (health < 0)
             	throw new ArgumentOutOfRangeException();
 
         	if (type != "basic")
@@ -52,7 +52,11 @@ namespace SQA_Tower_Defense
     	}
 
 
+        public Enemy Clone()
+        {
+            return new Enemy(this.health, this.speed, this.type, this.gold, this.location);
 
+        }
 
     	//Moves the enemy buy 1 unit down and 1 unit left (1 line)
     	public void Move()
