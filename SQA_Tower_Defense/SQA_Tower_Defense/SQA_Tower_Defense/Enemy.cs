@@ -33,7 +33,7 @@ namespace SQA_Tower_Defense
             	throw new ArgumentOutOfRangeException();
         	if (speed <= 0)
             	throw new ArgumentOutOfRangeException();
-        	if (health < 0)
+        	if (health <= 0)
             	throw new ArgumentOutOfRangeException();
 
         	if (type != "basic")

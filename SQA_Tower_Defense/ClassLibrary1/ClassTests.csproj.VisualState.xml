@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1000]C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj</TopNode>
-  <SelectedNode>[0-1075]ClassTests.MainGameTests.ClickingNewTowerSelectsCorrectTower</SelectedNode>
+  <TopNode>[0-1000]C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj</TopNode>
+  <SelectedNode>[0-1129]ClassTests.LanguageManagerTests.HasHello</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1000]C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" Expanded="true" />
-    <Node UniqueName="[0-1123]C:\Documents and Settings\mellinja\SQA-Tower-Defense\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" Expanded="true" />
-    <Node UniqueName="[0-1124]ClassTests" Expanded="true" />
-    <Node UniqueName="[0-1066]ClassTests.MainGameTests" Expanded="true" />
+    <Node UniqueName="[0-1000]C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\ClassTests.csproj" Expanded="true" />
+    <Node UniqueName="[0-1133]C:\Users\Andeh\Documents\Courses\CSSE376\Git\Final Project\SQA-Tower-Defense\SQA_Tower_Defense\ClassLibrary1\bin\Debug\ClassLibrary1.dll" Expanded="true" />
+    <Node UniqueName="[0-1134]ClassTests" Expanded="true" />
+    <Node UniqueName="[0-1123]ClassTests.AutomaticWaveTests" Expanded="true" />
+    <Node UniqueName="[0-1127]ClassTests.LanguageManagerTests" Expanded="true" />
   </Nodes>
 </VisualState>

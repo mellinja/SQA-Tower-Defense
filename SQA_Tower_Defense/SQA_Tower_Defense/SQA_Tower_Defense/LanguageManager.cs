@@ -65,12 +65,17 @@ namespace SQA_Tower_Defense
 
         }
 
-        protected LMap holder;
+         LMap holder;
 
         public LanguageManager()
         {
             holder = new LMap();
             ReadAllFiles();
+        }
+
+        public Boolean HasPhrase (String p)
+        {
+            return holder.contains(p); 
         }
 
         public void addPhrase(String phrase)

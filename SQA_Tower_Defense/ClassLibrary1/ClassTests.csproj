@@ -51,6 +51,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="EnemyMovementTestsWithCastle.cs" />
+    <Compile Include="LanguageManagerTest.cs" />
     <Compile Include="MainGameTests.cs" />
     <Compile Include="TowerTestInteractionWithEnemiesWithsetup.cs" />
     <Compile Include="TowerTestsInteractionWithEnemies.cs" />

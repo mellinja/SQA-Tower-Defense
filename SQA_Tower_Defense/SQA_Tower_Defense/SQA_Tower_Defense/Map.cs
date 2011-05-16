@@ -47,6 +47,7 @@ namespace SQA_Tower_Defense
            this.difficulty = difficulty;
            this.score = 0;
 
+
            this.towersOnMap = new List<Tower>();
            this.enemiesOnMap = new List<Enemy>();
            this.saveStates = new List<SaveState>();
@@ -257,7 +258,10 @@ return false;
 
 public Stack<Enemy> currentWave()
        {
-           return this.wave.Enemies;
+           if (this.wave != null)
+               return this.wave.Enemies;
+
+           else return null;
 
        }
        #endregion

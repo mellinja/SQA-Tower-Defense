@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 
 using System.Collections.Generic;
 
@@ -45,16 +45,16 @@ namespace ClassTests
         public void TestAutoWave()
         {
 
-            for (int i = 0; i < 5000; i++)
+            for (int i = 0; i < 999; i++)
             {
 
-                map.Update();//Callls 4999 updates
+                map.Update();//Callls 999 updates
 
             }
 
             Assert.IsNull(map.currentWave());
 
-            map.Update();//5000th update
+            map.Update();//1000th update
 
             Assert.IsNotNull(map.currentWave());
 
@@ -67,19 +67,19 @@ namespace ClassTests
         public void TestAutoWaveBecomesHarder()
         {
 
-            for (int i = 0; i < 5001; i++)
+            for (int i = 0; i < 1000; i++)
             {
 
-                map.Update();//Callls 5000 updates, creates wave
+                map.Update();//Callls 1000 updates, creates wave
 
             }
-
+            
             Enemy t = map.currentWave().Pop();
 
-            for (int i = 0; i < 5001; i++)
+            for (int i = 0; i < 1000; i++)
             {
 
-                map.Update();//Callls 5000  moreupdates, creates wave
+                map.Update();//Callls 1000  moreupdates, creates wave
 
             }
 
@@ -94,10 +94,10 @@ namespace ClassTests
         public void TestAutoWaveBecomesHarderAndBigger()
         {
 
-            for (int i = 0; i < 10001; i++)
+            for (int i = 0; i < 2000; i++)
             {
 
-                map.Update();//Callls 10000 updates, creates 2 waves, first one dies off
+                map.Update();//Callls 2000 updates, creates 2 waves, first one dies off
 
             }
 
@@ -105,10 +105,10 @@ namespace ClassTests
 
             Enemy t = map.currentWave().Pop();
 
-            for (int i = 0; i < 5001; i++)
+            for (int i = 0; i < 1000; i++)
             {
 
-                map.Update();//Callls 5000  moreupdates, creates wave
+                map.Update();//Callls 1000  moreupdates, creates wave
 
             }
 
@@ -127,4 +127,3 @@ namespace ClassTests
 
 }
 
-*/
