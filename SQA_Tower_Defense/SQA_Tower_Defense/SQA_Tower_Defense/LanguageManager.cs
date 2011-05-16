@@ -59,10 +59,6 @@ namespace SQA_Tower_Defense
                     return true;
                 }
             }
-
-
-
-
         }
 
          LMap holder;

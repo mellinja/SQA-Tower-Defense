@@ -89,18 +89,18 @@ namespace SQA_Tower_Defense
 
 	bool conflictUp = map.isConflicting(up);
 	bool conflictDown = map.isConflicting(down);
-bool conflictLeft = map.isConflicting(left);
+    bool conflictLeft = map.isConflicting(left);
 	bool conflictRight = map.isConflicting(right);
 
 if (!conflictDown && this.location.Y < this.castle.Location.Y)
 	{
-this.location = down;
-}
+    this.location = down;
+    }
 
-else if(!conflictUp && this.location.Y > this.castle.Location.Y)
-{
+            else if(!conflictUp && this.location.Y > this.castle.Location.Y)
+    {
 	this.location = up;
-}
+    }
 
 
 else if(!conflictRight && this.location.X < this.castle.Location.X)

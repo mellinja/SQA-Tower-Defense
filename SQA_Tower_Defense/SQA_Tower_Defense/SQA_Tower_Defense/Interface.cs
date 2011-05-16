@@ -19,6 +19,8 @@ namespace SQA_Tower_Defense
         Texture2D backgroundTexture;
         SpriteFont font;
         SpriteFont tipFont;
+        LanguageManager lm;
+        string language;
 
 
         public Interface(GraphicsDeviceManager graphics, SpriteBatch spriteBatch, SpriteFont font)
@@ -35,6 +37,8 @@ namespace SQA_Tower_Defense
 
             this.spriteBatch = spriteBatch;
             this.font = font;
+            lm = new LanguageManager();
+            language = "En";
 
         }
 
@@ -48,7 +52,7 @@ namespace SQA_Tower_Defense
             }
 
             Vector2 textLocation = new Vector2(graphics.PreferredBackBufferWidth - 300, graphics.PreferredBackBufferHeight * 4 / 5);
-            spriteBatch.DrawString(font, "Money: " + info.money, textLocation, Color.Red);
+            spriteBatch.DrawString(font, lm.getTranslation("Money","Sp") + ": " + info.money, textLocation, Color.Red);
             spriteBatch.DrawString(font, "Score: " + info.score, new Vector2(textLocation.X, textLocation.Y + 25), Color.Red);
 
         }

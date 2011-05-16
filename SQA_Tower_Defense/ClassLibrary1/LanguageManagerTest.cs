@@ -33,7 +33,7 @@ namespace ClassTests
         [Test()]
         public void IsHello()
         {
-            Assert.AreEqual("Hello", L.getTranslation("Hello", "En"));
+            Assert.AreEqual("Hola", L.getTranslation("Hello", "Sp"));
         }
         [Test()]
         public void HasName()
