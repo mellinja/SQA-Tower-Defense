@@ -27,6 +27,7 @@ namespace SQA_Tower_Defense
 
             public Boolean contains(String key)
             {
+                System.Console.WriteLine(key); 
                 return keys.Contains(key);
             }
 

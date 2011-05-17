@@ -9,11 +9,23 @@ Score
 Score
 Money
 Money
-Cost
-Cost
+Gold
+Gold
+gold
+gold
 Damage
 Damage
 Range
 Range
 Health
 Health
+Rewinding
+Rewinding
+Speed
+Speed
+enemy
+Enemy
+Sell for
+Sell for
+Tower
+Tower

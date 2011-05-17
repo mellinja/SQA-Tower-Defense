@@ -52,8 +52,8 @@ namespace SQA_Tower_Defense
             }
 
             Vector2 textLocation = new Vector2(graphics.PreferredBackBufferWidth - 300, graphics.PreferredBackBufferHeight * 4 / 5);
-            spriteBatch.DrawString(font, lm.getTranslation("Money","Sp") + ": " + info.money, textLocation, Color.Red);
-            spriteBatch.DrawString(font, "Score: " + info.score, new Vector2(textLocation.X, textLocation.Y + 25), Color.Red);
+            spriteBatch.DrawString(font, lm.getTranslation("Gold",language) + ": " + info.money, textLocation, Color.Red);
+            spriteBatch.DrawString(font, lm.getTranslation("Speed", language)+ ": " + info.score, new Vector2(textLocation.X, textLocation.Y + 25), Color.Red);
 
         }
 
@@ -65,8 +65,8 @@ namespace SQA_Tower_Defense
 
 
 
-            spriteBatch.DrawString(tipFont, enemy.Type + " enemy", new Vector2(tipBackground.X, tipBackground.Y), Color.White);
-            spriteBatch.DrawString(tipFont, "Health: " + enemy.HealthPercentage * 100 + "%" + "\nSpeed: " +enemy.Speed, new Vector2(tipBackground.X, tipBackground.Y + 15), Color.White);
+            spriteBatch.DrawString(tipFont, enemy.Type +  " " +lm.getTranslation("enemy", language), new Vector2(tipBackground.X, tipBackground.Y), Color.White);
+            spriteBatch.DrawString(tipFont, lm.getTranslation("Health", language)+ ": " + enemy.HealthPercentage * 100 + "%" + "\n" +lm.getTranslation("Speed", language)+ ": "  + enemy.Speed, new Vector2(tipBackground.X, tipBackground.Y + 15), Color.White);
             //spriteBatch.DrawString(tipFont, "Speed: " + enemy.Speed, new Vector2(tipBackground.X, tipBackground.Y + 30), Color.White);
 
         }
@@ -89,14 +89,14 @@ namespace SQA_Tower_Defense
 
             }
 
-            spriteBatch.DrawString(tipFont, tower.Name + " tower", new Vector2(tipBackground.X, tipBackground.Y), Color.White);
-            spriteBatch.DrawString(tipFont, "Damage: " + tower.AttackDamage, new Vector2(tipBackground.X, tipBackground.Y + 15), Color.White);
-            spriteBatch.DrawString(tipFont, "Sell for " + tower.Cost * 3 / 4 + " gold", new Vector2(tipBackground.X, tipBackground.Y + 30), Color.White);
+            // spriteBatch.DrawString(tipFont, tower.Name + lm.getTranslation("Tower", language), new Vector2(tipBackground.X, tipBackground.Y), Color.White);
+             spriteBatch.DrawString(tipFont, lm.getTranslation("Damage", language) + ": " + tower.AttackDamage, new Vector2(tipBackground.X, tipBackground.Y + 15), Color.White);
+             spriteBatch.DrawString(tipFont, lm.getTranslation("Sell for", language) + " " +tower.Cost * 3 / 4 + " " + lm.getTranslation("gold", language) + ": ", new Vector2(tipBackground.X, tipBackground.Y + 30), Color.White);
         }
 
         public void DisplayRewind()
         {
-            spriteBatch.DrawString(font, "< Rewinding... >", new Vector2(graphics.PreferredBackBufferWidth / 2 - graphics.PreferredBackBufferWidth / 4, graphics.PreferredBackBufferHeight / 2 - graphics.PreferredBackBufferHeight / 8), Color.White);
+            spriteBatch.DrawString(font, "< " + lm.getTranslation("Rewinding", language) + "... >", new Vector2(graphics.PreferredBackBufferWidth / 2 - graphics.PreferredBackBufferWidth / 4, graphics.PreferredBackBufferHeight / 2 - graphics.PreferredBackBufferHeight / 8), Color.White);
 
         }
 

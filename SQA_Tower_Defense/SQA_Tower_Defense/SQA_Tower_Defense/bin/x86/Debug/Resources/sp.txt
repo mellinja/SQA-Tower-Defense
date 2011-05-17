@@ -6,14 +6,26 @@ Nombre
 Basic
 Basico
 Score
-Puntuación
+Puntuacion
 Money
 Dinero
-Cost
+Gold
 Oro
+gold
+oro
 Damage
-Daños
+Danos
 Range
 Rango
 Health
 Puntos de Salud
+Rewinding
+Eres el rebobinado
+Speed
+Velocidad
+enemy
+Enemigo
+Sell for
+Cuesta para
+Tower
+Torre
