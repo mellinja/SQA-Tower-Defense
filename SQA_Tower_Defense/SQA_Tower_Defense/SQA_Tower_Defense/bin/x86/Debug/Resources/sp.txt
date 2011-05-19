@@ -3,8 +3,8 @@ Hello
 Hola
 Name
 Nombre
-Basic
-Basico
+basic
+basico
 Score
 Puntuacion
 Money
@@ -16,16 +16,56 @@ oro
 Damage
 Danos
 Range
-Rango
+Gama
 Health
 Puntos de Salud
 Rewinding
-Eres el rebobinado
+Rebobinado
 Speed
 Velocidad
 enemy
 Enemigo
 Sell for
-Cuesta para
+Venta de
 Tower
 Torre
+Main Menu
+Menu Principal
+Back
+Vuelta
+Languages
+Idiomas
+Options
+Opciones
+Raise Difficulty
+Aumentar Dificultad
+Lower Difficulty
+Menor Dificultad
+Difficulty
+Dificultad
+English
+Ingles
+Spanish
+Espanol
+Infinite
+Infinita
+Cost
+Costo
+Exit Game
+Salida Juego
+Resume
+Reanudar
+Easy
+Facil
+Normal
+Normales
+Hard
+Dificil
+Currently on
+Actualmente en
+dot
+deet
+slow
+lenta
+sniper
+francotirador

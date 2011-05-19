@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 namespace ClassTests
 {
 
-[TestFixture()]
+    [TestFixture()]
     class TowerTestInteractionWithEnemiesWithsetup
     {
 
@@ -44,7 +44,7 @@ namespace ClassTests
 
             Assert.AreEqual(0, tower.Enemies.Count);
             //Update method causes the tower to attack nearest enemy in its range
-            for(int i = 0; i < tower.UpdateMax; i++)
+            for (int i = 0; i < tower.UpdateMax; i++)
                 tower.Update();
 
             //Verify that the enemy was not damaged
@@ -62,7 +62,7 @@ namespace ClassTests
 
             Assert.AreEqual(1, tower.Enemies.Count);
 
-            for(int i = 0; i < tower.UpdateMax; i++)
+            for (int i = 0; i < tower.UpdateMax; i++)
                 tower.Update(); //Enemy is already within tower's range rectangle; tower's update should attack it
 
             Assert.AreEqual(9, enemy.Health); //Verify that the enemy has taken one point of damage
@@ -79,7 +79,7 @@ namespace ClassTests
 
             map.Update(); //Update method for map causes the towers to add nearby enemies
 
-            for(int i = 0; i < tower.UpdateMax; i++)
+            for (int i = 0; i < tower.UpdateMax; i++)
                 tower.Update(); //Enemy is already within tower's range rectangle; tower's update should attack it after a certain number of cycles
 
             Assert.AreEqual(9, enemy.Health); //Verify that the enemy has taken one point of damage
@@ -91,7 +91,7 @@ namespace ClassTests
             for (int i = 0; i < 60; i++)
                 tower.Update(); //The tower attacks once every 60 updates -- so force 60 updates on the tower for it to attack again.
 
-            
+
 
             Assert.AreEqual(9, enemy.Health); //Verify that the enemy has not received additional damage
 
@@ -112,11 +112,11 @@ namespace ClassTests
             Assert.AreEqual(tower.Enemies.Count, 1); //Verify that the first tower's list of enemies has one enemy
             Assert.AreEqual(tower2.Enemies.Count, 1); //Verify that the second tower's list of enemies has one enemy
 
-       
-            tower.AttackEnemy(enemy); //Update the first tower to attack the enemy                
+
+            tower.AttackEnemy(enemy); //Update the first tower to attack the enemy           	 
 
             tower2.AttackEnemy(enemy); //Update the second tower to attack (and thereby killing) the enemy
-            
+
 
             map.Update(); //Update method for map causes both of the towers to update their list of nearby enemies\
 
@@ -130,16 +130,16 @@ namespace ClassTests
         [Test()]
         public void EnemyMoveOutofRange()
         {
-           //enemy can move out of range 
-           Enemy enemy2 = new Enemy(10, 1.0f, "basic", 10, new Rectangle(3, 3, 1, 1));
-           map.SpawnEnemy(enemy2);
-           map.Update();
-           
+            //enemy can move out of range
+            Enemy enemy2 = new Enemy(10, 1.0f, "basic", 10, new Rectangle(3, 3, 1, 1));
+            map.SpawnEnemy(enemy2);
+            map.Update();
 
-           Assert.AreEqual(2, tower.Enemies.Count);
-           enemy.moveTo(500, 500);
-           map.Update();
-           Assert.AreEqual(tower.Enemies.Count, 1);
+
+            Assert.AreEqual(2, tower.Enemies.Count);
+            enemy.moveTo(500, 500);
+            map.Update();
+            Assert.AreEqual(tower.Enemies.Count, 1);
         }
 
         [Test()]
@@ -155,10 +155,10 @@ namespace ClassTests
 
             Assert.AreEqual(tower.Enemies.Count, 2);
             Assert.AreEqual(enemy.Health, 10);
-            
+
             enemy.moveTo(5000, 5000);
             map.Update();
-            
+
             Assert.AreEqual(tower.Enemies.Count, 1);
             Assert.AreEqual(enemy2.Health, 10);
 
@@ -172,14 +172,14 @@ namespace ClassTests
         [Test()]
         public void attackEvery60()
         {
-            
+
             //Tests tower attacks once every 60 updates
 
             map.Update();
 
 
             Assert.AreEqual(enemy.Health, 10);
-            int temp = enemy.Health;
+            float temp = enemy.Health;
             for (int x = 0; x < 59; x++)
             {
                 tower.Update();
@@ -193,20 +193,20 @@ namespace ClassTests
         public void MultipleTowersCanAttackSingleEnemy()
         {
             //Testing that two towers can attack the same enemy
-            Tower tower2 = new Tower("", 10, 20, 30, 40, new Rectangle(4,4, 1,1));
+            Tower tower2 = new Tower("", 10, 20, 30, 40, new Rectangle(4, 4, 1, 1));
 
             map.PlaceTower(tower2);
             map.Update();
 
-            int temp = enemy.Health; 
-            for(int i = 0; i < tower.UpdateMax; i++)    
-                tower.Update(); 
-            
-            Assert.AreNotEqual(enemy.Health, temp); 
+            float temp = enemy.Health;
+            for (int i = 0; i < tower.UpdateMax; i++)
+                tower.Update();
+
+            Assert.AreNotEqual(enemy.Health, temp);
             temp = enemy.Health;
-            for(int i = 0; i < tower2.UpdateMax; i++)
+            for (int i = 0; i < tower2.UpdateMax; i++)
                 tower2.Update();
-            
+
             Assert.AreNotEqual(enemy.Health, temp);
         }
 
@@ -218,9 +218,9 @@ namespace ClassTests
 
             Enemy enemy2 = new Enemy(1, 1.0f, "basic", 10, new Rectangle(3, 3, 1, 1));
             map.SpawnEnemy(enemy2);
-            
+
             map.Update();
-            
+
             Assert.AreEqual(2, tower.Enemies.Count);
             for (int i = 0; i < tower.UpdateMax; i++)
             {
@@ -228,7 +228,7 @@ namespace ClassTests
             }
 
             map.Update();
-            
+
             Assert.AreEqual(1, tower.Enemies.Count);
         }
 

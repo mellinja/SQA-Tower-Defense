@@ -3,8 +3,8 @@ Hello
 Hello
 Name
 Name
-Basic
-Basic
+basic
+basic
 Score
 Score
 Money
@@ -17,6 +17,8 @@ Damage
 Damage
 Range
 Range
+Cost
+Cost
 Health
 Health
 Rewinding
@@ -29,3 +31,41 @@ Sell for
 Sell for
 Tower
 Tower
+Main Menu
+Main Menu
+Back
+Back
+Languages
+Languages
+Options
+Options
+Difficulty
+Difficulty
+Raise Difficulty
+Raise Difficulty
+Lower Difficulty
+Lower Difficulty
+English
+English
+Spanish
+Spanish
+Infinite
+Infinite
+Exit Game
+Exit Game
+Resume
+Resume
+Easy
+Easy
+Normal
+Normal
+Hard
+Hard
+Currently on
+Currently on
+dot
+dot
+slow
+slow
+sniper
+sniper

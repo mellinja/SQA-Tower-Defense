@@ -11,72 +11,58 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SQA_Tower_Defense
 {
-   /// <summary>
-   /// This is the main type for your game
-   /// </summary>
-   public class Castle
-   {
-       int health;
-       Rectangle location;
+    /// <summary>
+    /// This is the main type for your game
+    /// </summary>
+    public class Castle
+    {
+        float health;
+        Rectangle location;
         string image;
+        public Castle(float Health, Rectangle rec)
+        {
 
-       public Castle(int Health, Rectangle rec)
-       {
+            if (Health <= 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
 
-           if (Health <= 0)
-           {
-               throw new ArgumentOutOfRangeException();
-           }
+            if (0 == rec.Width || 0 == rec.Height)
+            {
+                throw new ArgumentNullException();
+            }
 
-           if (0 == rec.Width || 0 == rec.Height)
-           {
-               throw new ArgumentNullException();
-           }
-
-           this.health = Health;
-           this.location = rec;
+            this.health = Health;
+            this.location = rec;
             this.image = "castle";
 
-       }
+        }
 
-     /*  public void DrawHealth(Texture2D texture, SpriteBatch spriteBatch)
-       {
+        public float Health
+        {
+            get { return this.health; }
+            set { this.health = value; }
+        }
 
-           Color barColor;
-           if (HealthPercentage < 0.30)
-               barColor = Color.Red;
-           else if (HealthPercentage < 0.70)
-               barColor = Color.Yellow;
-           else
-               barColor = Color.Green;
-           Rectangle barLocation = new Rectangle(this.location.X, this.location.Y + this.location.Height, (int)(this.location.Width * HealthPercentage), 20);
+        public Rectangle Location
+        {
+            get { return this.location; }
+            set { this.location = value; }
+        }
 
-           spriteBatch.Draw(texture, barLocation, barColor);
+        public void takeDamage(int i)
+        {
+            this.health -= i;
 
-       }
-       */
-       public int Health
-       {
-           get { return this.health; }
-           set { this.health = value; }
-       }
+        }
 
-       public Rectangle Location
-       {
-           get { return this.location; }
-           set { this.location = value; }
-       }
+        public string CastleImage
+        {
+            get { return this.image; }
 
-       public void takeDamage(int i)
-       {
-           this.health -= i;
+        }
 
-       }
 
-    public string CastleImage
-    {
-        get { return this.image;}
-       
+
     }
-   }
 }
